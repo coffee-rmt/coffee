@@ -35,7 +35,6 @@ const getYear = () => {
 const openModalProductMobile = (product) => {
   const modalElement = document.querySelector(".detail-product-modal");
   modalElement.style.display = "block";
-  console.log("product", product);
 
   document.querySelector(".detail-product-modal img").src = product?.img;
   document.querySelector(".detail-product-modal .title").innerHTML =
