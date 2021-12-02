@@ -152,6 +152,8 @@ body {
   justify-content: center;
   width: 80%;
   margin: 4px auto;
+  text-decoration: none;
+  color: #1F1F1F;
 }
 
 #side-drawer .drawer-logo img {
