@@ -53,7 +53,7 @@ const openModalProductMobile = (product) => {
     const style = `background-color: ${buttonColor}; color: ${fontColor};`;
 
     marketplacesElement =
-      marketplacesElement + `<a href="${marketplace.link}" target="_blank" style="${style}" class="button">${marketplace.name}</a>`;
+      marketplacesElement + `<a href="${marketplace.link || '#'}" target="_blank" style="${style}" class="button">${marketplace.name}</a>`;
   });
 
   document.querySelector(".detail-product-modal .marketplaces").innerHTML =
