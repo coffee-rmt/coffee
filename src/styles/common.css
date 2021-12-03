@@ -95,7 +95,7 @@ body {
   cursor: pointer;
   transition: 0.15s;
   text-decoration: none;
-  color: #1F1F1F;
+  color: #1f1f1f;
 }
 
 .top-nav .menu-item:hover {
@@ -153,7 +153,7 @@ body {
   width: 80%;
   margin: 4px auto;
   text-decoration: none;
-  color: #1F1F1F;
+  color: #1f1f1f;
 }
 
 #side-drawer .drawer-logo img {
@@ -420,7 +420,41 @@ footer .copyright .container {
 
 .pagination-desktop .page.active {
   color: #ffffff;
-  background-color: #5C3F32;
+  background-color: #5c3f32;
+}
+
+/* form input */
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.input-wrapper label {
+  font-size: 15px;
+  letter-spacing: 0.09em;
+  color: #1f1f1f;
+}
+
+.input-wrapper input {
+  background: #fdfdfd;
+  border: 2px solid #c0c0c0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 8px 8px;
+  height: 40px;
+  color: #1F1F1F;
+}
+
+.input-wrapper textarea {
+  background: #fdfdfd;
+  border: 2px solid #c0c0c0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 8px 8px;
+  color: #1F1F1F;
 }
 
 @media screen and (min-width: 768px) {

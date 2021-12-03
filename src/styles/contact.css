@@ -1,0 +1,89 @@
+.container {
+  max-width: 1200px;
+  padding: 0 24px;
+}
+
+.page-title {
+  margin-left: -24px;
+}
+
+.address-card {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 8px;
+  padding: 16px 16px 12px;
+  margin-bottom: 16px;
+}
+
+.address-card .address-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.06em;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.address-card .address-detail {
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: 0.04em;
+  color: #1f1f1f;
+}
+
+.google-map-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 64px;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 8px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card .contact-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-card img {
+  height: 24px;
+  width: 24px;
+}
+
+.contact-card .key {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: 0.04em;
+  color: #1f1f1f;
+  margin-right: -8px;
+}
+
+.form-card {
+  margin-bottom: 100px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.form-card .button {
+  margin-top: 24px;
+}
