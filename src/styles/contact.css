@@ -1,6 +1,7 @@
 .container {
   max-width: 1200px;
   padding: 0 24px;
+  margin: 0 auto;
 }
 
 .page-title {
@@ -25,6 +26,15 @@
   color: #000000;
   text-align: center;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.address-card .address-title img {
+  width: 20px;
+  margin-right: 8px;
+  margin-top: -4px;
 }
 
 .address-card .address-detail {
@@ -86,4 +96,42 @@
 
 .form-card .button {
   margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-title {
+    margin-left: 0;
+  }
+
+  .card-wrapper {
+    display: flex;
+    gap: 26px;
+  }
+
+  .card-wrapper .card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-wrapper .card-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 480px;
+    max-width: 480px;
+  }
+
+  .address-card {
+    padding: 32px;
+  }
+
+  .contact-card {
+    padding: 32px;
+    min-height: 148.46px;
+  }
+
+  .form-card {
+    padding: 32px;
+  }
 }
