@@ -31,7 +31,7 @@ body {
   text-decoration: none;
 }
 
-.container {
+.container-coffee {
   overflow-x: hidden;
 }
 
@@ -219,7 +219,7 @@ footer {
   display: none;
 }
 
-footer .container {
+footer .container-coffee {
   padding-bottom: 0;
   max-width: 1200px;
   margin: auto;
@@ -265,7 +265,7 @@ footer .copyright {
   border-top: 2px solid #ffffff;
 }
 
-footer .copyright .container {
+footer .copyright .container-coffee {
   display: flex;
   justify-content: space-between;
   align-items: center;
