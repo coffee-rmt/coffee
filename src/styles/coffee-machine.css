@@ -34,6 +34,10 @@
   overflow: hidden;
 }
 
+.product-list .product-detail {
+  justify-content: space-between;
+}
+
 .product-list .product-detail .detail-wrapper {
   min-height: 68px;
   display: flex;
