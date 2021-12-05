@@ -33,6 +33,10 @@ const getYear = () => {
 };
 
 const openModalProductMobile = (product) => {
+  const maxMobile = 768;
+  if (window.innerWidth >= maxMobile) {
+    return;
+  }
   const modalElement = document.querySelector(".detail-product-modal");
   modalElement.style.display = "block";
 

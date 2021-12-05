@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-control" content="public" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Coffee" />
+    <meta name="theme-color" content="#272727" />
+    <link rel="apple-touch-icon" href="/src/images/coffee-icon.png" />
+    <link rel="icon" href="/src/images/coffee-icon.png" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <link rel="stylesheet" href="/src/styles/coffee-machine.css" />
+    <title>Coffee Brand</title>
+  </head>
+  <body>
+    <main class="screen">
+      <nav class="top-nav">
+        <div class="top-nav-container">
+          <div class="logo-wrapper">
+            <img src="/src/images/coffe-icon.png" />
+          </div>
+          <div class="hamburger-menu">☰</div>
+          <div class="menu-list">
+            <a class="menu-item" href="/view/index.html">Beranda</a>
+            <a class="menu-item" href="/view/coffee.html">Kopi</a>
+            <a class="menu-item" href="/view/coffee-machine.html">Mesin Kopi</a>
+            <a class="menu-item" href="#">Tokopedia</a>
+            <a class="menu-item" href="#">Shopee</a>
+            <a class="menu-item" href="/view/about-us.html">Tentang Kami</a>
+            <a class="menu-item" href="/view/contact.html">Kontak</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container-coffee">
+        <div class="page-title">Kopi</div>
+        <div class="product-list">
+          <div class="product-card-mobile">
+            <div class="img-wrapper">
+              <img
+                src="/src/images/coffee-page/product-coffee-1.png"
+                alt="product"
+              />
+            </div>
+            <div class="product-detail">
+              <div class="detail-wrapper">
+                <div class="product-name">Creatista Plus</div>
+                <div class="product-price">Rp 4.000.000</div>
+                <div class="product-description">
+                  Enjoy barista-style quality coffee recipes with the Creatista
+                  Plus coffee machine. Create unique latte art and a broad range
+                  of delightful milk-based recipes.
+                </div>
+              </div>
+              <div
+                class="button mobile-only"
+                onclick="openModalProductMobile({
+                img: '/src/images/coffee-page/product-coffee-1.png',
+                name: 'Creatista Plus',
+                price: 'Rp 4.000.000',
+                description: 'Enjoy barista-style quality coffee recipes with the Creatista Plus coffee machine. Create unique latte art and a broad range of delightful milk-based recipes.',
+                marketplaces: [
+                  {
+                    name: 'Tokopedia',
+                    link: 'https://www.tokopedia.com/ourgrocery/wafer-beng-beng-coklat-1-box-isi-20pcs',
+                    button_color: '#03AC0E',
+                    font_color: '#FFFFFF',
+                  },
+                  {
+                    name: 'Shopee',
+                    link: 'https://shopee.co.id/events3/code/1409859301/',
+                    button_color: '#F94D2F',
+                    font_color: '#FFFFFF',
+                  },
+                ]
+              })"
+              >
+                Detail
+              </div>
+              <div class="marketplace-button">
+                <a
+                  href="https://www.tokopedia.com"
+                  class="button"
+                  style="background-color: #03ac0e; color: #ffffff"
+                  target="_blank"
+                >
+                  Tokopedia
+                </a>
+                <a
+                  href="https://shopee.co.id"
+                  class="button"
+                  style="background-color: #f94d2f; color: #ffffff"
+                  target="_blank"
+                >
+                  Shopee
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-mobile">
+            <div class="img-wrapper">
+              <img
+                src="/src/images/coffee-page/product-coffee-2.png"
+                alt="product"
+              />
+            </div>
+            <div class="product-detail">
+              <div class="detail-wrapper">
+                <div class="product-name">Gran Lattissima</div>
+                <div class="product-price">Rp 4.200.000</div>
+                <div class="product-description">
+                  Enjoy barista-style quality coffee recipes with the Creatista
+                  Plus coffee machine. Create unique latte art and a broad range
+                  of delightful milk-based recipes.
+                </div>
+              </div>
+              <div
+                class="button mobile-only"
+                onclick="openModalProductMobile({
+                img: '/src/images/coffee-page/product-coffee-1.png',
+                name: 'Gran Lattissima',
+                price: 'Rp 4.200.000',
+                description: 'With new Nespresso Gran Lattissima, there is a way for all your latte wishes. With six different recipe options at the touch of a button and an easy rinsing system, the Gran Lattissima does the work while you lean back.',
+                marketplaces: [
+                  {
+                    name: 'Tokopedia',
+                    link: 'https://www.tokopedia.com',
+                    button_color: '#03AC0E',
+                    font_color: '#FFFFFF',
+                  },
+                  {
+                    name: 'Shopee',
+                    link: 'https://shopee.co.id',
+                    button_color: '#F94D2F',
+                    font_color: '#FFFFFF',
+                  },
+                ]
+              })"
+              >
+                Detail
+              </div>
+              <div class="marketplace-button">
+                <a
+                  href="https://www.tokopedia.com"
+                  class="button"
+                  style="background-color: #03ac0e; color: #ffffff"
+                  target="_blank"
+                >
+                  Tokopedia
+                </a>
+                <a
+                  href="https://shopee.co.id"
+                  class="button"
+                  style="background-color: #f94d2f; color: #ffffff"
+                  target="_blank"
+                >
+                  Shopee
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-mobile">
+            <div class="img-wrapper">
+              <img
+                src="/src/images/coffee-page/product-coffee-3.png"
+                alt="product"
+              />
+            </div>
+            <div class="product-detail">
+              <div class="detail-wrapper">
+                <div class="product-name">Atelier</div>
+                <div class="product-price">Rp 20.100.000</div>
+                <div class="product-description">
+                  Make it, shape it, stir it to your will. With Nespresso
+                  Atelier, you are the craftsman of your own recipe. The machine
+                  is your personal workbench, with a technology that allows you
+                  to froth any type of milk, from cow to almond, to soy...
+                  Enabling you to make any recipe, whether you prefer
+                  macchiatos, mochas or even flat whites.
+                </div>
+              </div>
+              <div class="button mobile-only">Detail</div>
+              <div class="marketplace-button">
+                <a
+                  href="https://www.tokopedia.com"
+                  class="button"
+                  style="background-color: #03ac0e; color: #ffffff"
+                  target="_blank"
+                >
+                  Tokopedia
+                </a>
+                <a
+                  href="https://shopee.co.id"
+                  class="button"
+                  style="background-color: #f94d2f; color: #ffffff"
+                  target="_blank"
+                >
+                  Shopee
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-mobile">
+            <div class="img-wrapper">
+              <img
+                src="/src/images/coffee-page/product-coffee-4.png"
+                alt="product"
+              />
+            </div>
+            <div class="product-detail">
+              <div class="detail-wrapper">
+                <div class="product-name">CitiZ & Aeroccino Bundle</div>
+                <div class="product-price">Rp 11.200.000</div>
+                <div class="product-description">
+                  Enjoy barista-style quality coffee recipes with the Creatista
+                  Plus coffee machine. Create unique latte art and a broad range
+                  of delightful milk-based recipes.
+                </div>
+              </div>
+              <div class="button mobile-only">Detail</div>
+              <div class="marketplace-button">
+                <a
+                  href="https://www.tokopedia.com"
+                  class="button"
+                  style="background-color: #03ac0e; color: #ffffff"
+                  target="_blank"
+                >
+                  Tokopedia
+                </a>
+                <a
+                  href="https://shopee.co.id"
+                  class="button"
+                  style="background-color: #f94d2f; color: #ffffff"
+                  target="_blank"
+                >
+                  Shopee
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-mobile">
+            <div class="img-wrapper">
+              <img
+                src="/src/images/coffee-page/product-coffee-5.png"
+                alt="product"
+              />
+            </div>
+            <div class="product-detail">
+              <div class="detail-wrapper">
+                <div class="product-name">
+                  Pixie Electric Red & Aeroccino3 Red Bundle
+                </div>
+                <div class="product-price">Rp 3.000.000</div>
+                <div class="product-description">
+                  Enjoy barista-style quality coffee recipes with the Creatista
+                  Plus coffee machine. Create unique latte art and a broad range
+                  of delightful milk-based recipes.
+                </div>
+              </div>
+              <div class="button mobile-only">Detail</div>
+              <div class="marketplace-button">
+                <a
+                  href="https://www.tokopedia.com"
+                  class="button"
+                  style="background-color: #03ac0e; color: #ffffff"
+                  target="_blank"
+                >
+                  Tokopedia
+                </a>
+                <a
+                  href="https://shopee.co.id"
+                  class="button"
+                  style="background-color: #f94d2f; color: #ffffff"
+                  target="_blank"
+                >
+                  Shopee
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-mobile">
+            <div class="img-wrapper">
+              <img
+                src="/src/images/coffee-page/product-coffee-6.png"
+                alt="product"
+              />
+            </div>
+            <div class="product-detail">
+              <div class="detail-wrapper">
+                <div class="product-name">Creatista Plus</div>
+                <div class="product-price">Rp 4.700.000</div>
+                <div class="product-description">
+                  Pixie is the most ergonomic and compact model with a range of
+                  innovative and advanced features. Includes Aeroccino milk
+                  frother to make creamy milk froth.
+                </div>
+              </div>
+              <div class="button mobile-only">Detail</div>
+              <div class="marketplace-button">
+                <a
+                  href="https://www.tokopedia.com"
+                  class="button"
+                  style="background-color: #03ac0e; color: #ffffff"
+                  target="_blank"
+                >
+                  Tokopedia
+                </a>
+                <a
+                  href="https://shopee.co.id"
+                  class="button"
+                  style="background-color: #f94d2f; color: #ffffff"
+                  target="_blank"
+                >
+                  Shopee
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-pagination-mobile button">Lihat Selanjutnya</div>
+        <div class="pagination-desktop">
+          <div class="prev-next">Prev</div>
+          <div class="page active">1</div>
+          <div class="page">2</div>
+          <div class="page">3</div>
+          <div class="prev-next">Next</div>
+        </div>
+        <div class="detail-product-modal">
+          <div class="modal-content">
+            <div class="top-modal">
+              <div class="close-button">x</div>
+            </div>
+            <div class="modal-inner">
+              <div class="new-product-card">
+                <div class="image-wrapper-mobile">
+                  <img alt="img product" />
+                </div>
+                <div class="product-detail">
+                  <div class="title"></div>
+                  <div class="product-price"></div>
+                  <div class="product-description"></div>
+                  <div class="marketplaces"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="bottom-nav">
+        <a href="#" class="nav-item" id="index-page">
+          <div class="img-wrapper">
+            <img src="/src/images/home.png" alt="beranda" />
+          </div>
+          <div class="title">Beranda</div>
+        </a>
+        <a href="#" class="nav-item active" id="coffee-page">
+          <div class="img-wrapper">
+            <img
+              src="/src/images/coffee-pack.png"
+              alt="beranda"
+              style="opacity: 0.6"
+            />
+          </div>
+          <div class="title">Kopi</div>
+        </a>
+        <a href="#" class="nav-item" id="coffee-machine-page">
+          <div class="img-wrapper">
+            <img src="/src/images/coffee-machine.png" alt="beranda" />
+          </div>
+          <div class="title">Mesin Kopi</div>
+        </a>
+      </nav>
+    </main>
+    <div id="side-drawer">
+      <div class="drawer-left">
+        <div class="drawer-logo">
+          <img src="/src/images/coffe-icon.png" alt="logo" />
+        </div>
+        <div class="menu-list">
+          <a class="menu-item" href="#">Tokopedia</a>
+          <a class="menu-item" href="#">Shopee</a>
+          <a class="menu-item" href="/view/about-us.html">Tentang Kami</a>
+          <a class="menu-item" href="/view/contact.html">Kontak</a>
+        </div>
+      </div>
+      <div class="drawer-right">a</div>
+    </div>
+    <footer tabindex="0">
+      <div class="footer-content container-coffee">
+        <div class="footer-section">
+          <div class="footer-title">Coffe Brand</div>
+          <div class="footer-content-text">
+            Jl. Sejahtera No.24A, RT.04/RW.14, Gambir Tim., Kec. Gambir, Kota
+            Jakarta Pusat, Daerah Khusus Ibukota Jakarta 123456
+          </div>
+        </div>
+        <div class="footer-section right">
+          <div class="footer-title">Contact us</div>
+          <div>
+            <div class="footer-content-text">
+              <span class="bold">Telp:</span>
+              <span>082299110022</span>
+            </div>
+            <div class="footer-content-text">
+              <span class="bold">Istagram:</span>
+              <span>@coffee_brand</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container-coffee">
+          <div>cs@coffee_brand.com</div>
+          <div>
+            © <span class="year"></span> Coffee Brand. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/src/scripts/scripts.js"></script>
+  </body>
+</html>
