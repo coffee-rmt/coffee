@@ -1,0 +1,66 @@
+.our-link-wrapper {
+  max-width: 500px;
+  padding: 40px;
+  margin: auto;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.our-link-wrapper .our-brand .img-wrapper {
+  height: 120px;
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-link-wrapper .our-brand .img-wrapper img {
+  object-fit: contain;
+  height: 100%;
+}
+
+.our-link-wrapper .our-brand .brand-name {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 0.09em;
+  color: #1f1f1f;
+}
+
+.our-link-wrapper .our-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.our-link-wrapper .our-link-list .our-link {
+  width: 100%;
+  font-size: 19px;
+  line-height: 19px;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.our-link-wrapper .our-link-list .our-link:last-child {
+  margin-bottom: 40px;
+}
+
+.our-link-wrapper .our-link-list .our-link.button:active {
+  border: 2px solid rgb(200, 255, 0);
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 500px) {
+  .our-link-wrapper {
+    border: 10px solid #5c3f32;
+    background: white;
+  }
+}
