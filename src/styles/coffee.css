@@ -259,6 +259,8 @@
   .product-coffee-card .img-wrapper {
     min-width: 420px;
     border-radius: 16px;
+    height: fit-content;
+    min-height: 420px;
   }
 
   .product-coffee-card .product-detail .product-title {
@@ -291,6 +293,8 @@
     min-width: 420px;
     border-radius: 16px;
     margin-bottom: 0;
+    height: fit-content;
+    min-height: 420px;
   }
 
   .brand-card .brand-container .product-detail {
@@ -328,6 +332,7 @@
 
   .product-list {
     justify-content: space-between;
+    overflow: auto;
   }
 
   .product-list-wrapper {

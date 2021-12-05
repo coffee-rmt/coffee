@@ -229,6 +229,19 @@ footer .footer-content {
   padding: 44px 24px 60px;
   display: flex;
   justify-content: space-between;
+  display: flex;
+  margin: auto;
+  max-width: 1200px;
+}
+
+footer .copyright .container-coffee {
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  margin: auto;
+  color: #ffffff;
+  max-width: 1200px;
 }
 
 footer .footer-section {

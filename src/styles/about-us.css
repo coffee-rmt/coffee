@@ -113,12 +113,12 @@
   .about-us-wrapper .about-us-right {
     display: block;
   }
-
-
+  
   .our-team-wrapper .our-team-list {
     justify-content: space-between;
     overflow-y: hidden;
     gap: 16px;
+    overflow-x: auto;
   }
 
   .our-team-wrapper .our-team-item {
