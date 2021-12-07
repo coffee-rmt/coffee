@@ -19,7 +19,7 @@ body {
 
 .button {
   height: 48px;
-  background: #5c3f32;
+  background: #3E4444;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -50,7 +50,7 @@ body {
   padding: 8px 24px;
   position: sticky;
   top: 0;
-  background: white;
+  background: rgba(62, 68, 68, 1);
 }
 
 .top-nav-container {
@@ -76,12 +76,13 @@ body {
   align-items: center;
   justify-content: center;
   background: #ffffff;
-  border: 2px solid #5c3f32;
+  border: 2px solid #3E4444;
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 24px;
   padding-bottom: 3px;
-  color: #5c3f32;
+  color: #3E4444;
+  background-color: #7e7e7e;
 }
 
 .top-nav .menu-list {
@@ -95,7 +96,7 @@ body {
   cursor: pointer;
   transition: 0.15s;
   text-decoration: none;
-  color: #1f1f1f;
+  color: white;
 }
 
 .top-nav .menu-item:hover {
@@ -214,7 +215,7 @@ body {
 /* footer */
 
 footer {
-  background-color: #5c3f32;
+  background-color: rgba(62, 68, 68, 1);
   margin-top: 80px;
   display: none;
 }
@@ -414,16 +415,16 @@ footer .copyright .container-coffee {
 
 .pagination-desktop .prev-next {
   padding: 8px 16px;
-  background: #5c3f32;
+  background: #3E4444;
   border-radius: 4px;
-  border: 1px solid #5c3f32;
+  border: 1px solid #3E4444;
   cursor: pointer;
 }
 
 .pagination-desktop .page {
   border-radius: 4px;
   color: #1f1f1f;
-  border: 1px solid #5c3f32;
+  border: 1px solid #3E4444;
   width: 40px;
   height: 40px;
   display: flex;
@@ -434,7 +435,7 @@ footer .copyright .container-coffee {
 
 .pagination-desktop .page.active {
   color: #ffffff;
-  background-color: #5c3f32;
+  background-color: #3E4444;
 }
 
 /* form input */

@@ -86,7 +86,7 @@
   margin: 28px auto 100px;
   width: calc(100vw - 48px);
   background-color: #ffffff;
-  border: 2px solid #5c3f32;
+  border: 2px solid #3E4444;
   color: #1f1f1f;
   font-size: 15px;
   font-weight: bold;
@@ -121,7 +121,7 @@
   align-items: center;
   font-size: 22px;
   cursor: pointer;
-  color: #5c3f32;
+  color: #3E4444;
   font-weight: bold;
   margin-left: auto;
   margin-right: 8px;
