@@ -19,7 +19,7 @@ body {
 
 .button {
   height: 48px;
-  background: #3E4444;
+  background: #3e4444;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -76,12 +76,12 @@ body {
   align-items: center;
   justify-content: center;
   background: #ffffff;
-  border: 2px solid #3E4444;
+  border: 2px solid #3e4444;
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 24px;
   padding-bottom: 3px;
-  color: #3E4444;
+  color: #3e4444;
   background-color: #7e7e7e;
 }
 
@@ -277,6 +277,7 @@ footer .footer-content-text .bold {
 footer .copyright {
   padding: 12px 24px;
   border-top: 2px solid #ffffff;
+  background-color: #363636;
 }
 
 footer .copyright .container-coffee {
@@ -415,16 +416,16 @@ footer .copyright .container-coffee {
 
 .pagination-desktop .prev-next {
   padding: 8px 16px;
-  background: #3E4444;
+  background: #3e4444;
   border-radius: 4px;
-  border: 1px solid #3E4444;
+  border: 1px solid #3e4444;
   cursor: pointer;
 }
 
 .pagination-desktop .page {
   border-radius: 4px;
   color: #1f1f1f;
-  border: 1px solid #3E4444;
+  border: 1px solid #3e4444;
   width: 40px;
   height: 40px;
   display: flex;
@@ -435,7 +436,7 @@ footer .copyright .container-coffee {
 
 .pagination-desktop .page.active {
   color: #ffffff;
-  background-color: #3E4444;
+  background-color: #3e4444;
 }
 
 /* form input */
@@ -460,7 +461,7 @@ footer .copyright .container-coffee {
   border-radius: 8px;
   padding: 8px 8px;
   height: 40px;
-  color: #1F1F1F;
+  color: #1f1f1f;
 }
 
 .input-wrapper textarea {
@@ -469,7 +470,7 @@ footer .copyright .container-coffee {
   box-sizing: border-box;
   border-radius: 8px;
   padding: 8px 8px;
-  color: #1F1F1F;
+  color: #1f1f1f;
 }
 
 @media screen and (min-width: 768px) {
@@ -515,7 +516,7 @@ footer .copyright .container-coffee {
     font-size: 28px;
     line-height: 28px;
     letter-spacing: 0.04em;
-    margin-bottom: 48px;
+    margin-bottom: 20px;
   }
 
   .new-product-card {

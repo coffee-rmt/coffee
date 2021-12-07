@@ -45,7 +45,7 @@
 /* product-list */
 
 .product-list-wrapper {
-  margin: 40px 0 60px;
+  margin: 40px 0 48px;
 }
 
 .product-list-wrapper .title-list {
@@ -138,7 +138,7 @@
   border-radius: 8px;
   margin: 0 24px;
   padding: 12px;
-  margin-bottom: 44px;
+  margin-bottom: 28px;
 }
 
 .brand-card .brand-wrapper {
@@ -227,7 +227,7 @@
     flex-direction: column;
     margin: 0 24px;
     overflow-x: unset;
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
 
   footer .container-coffee {
@@ -246,7 +246,7 @@
     margin-right: -48px;
     width: 100%;
     padding: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 
   .product-coffee-card .product-container {
@@ -278,7 +278,7 @@
     width: 100%;
     padding: 32px;
     background-color: #ccd4d6;
-    margin-bottom: 80px;
+    margin-bottom: 48px;
   }
 
   .brand-card .brand-container {
@@ -321,13 +321,13 @@
   }
 
   .singgle-banner {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 
   .singgle-banner .banner-title {
     font-size: 28px;
     line-height: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .product-list {

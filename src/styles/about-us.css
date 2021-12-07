@@ -126,4 +126,8 @@
     min-width: calc(1200px / 3 - 32px);
     margin-right: 0;
   }
+
+  .our-team-wrapper {
+    margin-bottom: 20px;
+  }
 }
