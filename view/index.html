@@ -17,17 +17,41 @@
       <nav class="top-nav">
         <div class="top-nav-container">
           <div class="logo-wrapper">
-            <img src="/src/images/coffe-icon.png" />
+            <a href="/view/index.html">
+              <img src="/src/images/blue-logo.svg" />
+            </a>
           </div>
-          <div class="hamburger-menu">☰</div>
-          <div class="menu-list">
-            <a class="menu-item" href="/view/index.html">Beranda</a>
-            <a class="menu-item" href="/view/coffee.html">Kopi</a>
-            <a class="menu-item" href="/view/coffee-machine.html">Mesin Kopi</a>
-            <a class="menu-item" href="#">Tokopedia</a>
-            <a class="menu-item" href="#">Shopee</a>
-            <a class="menu-item" href="/view/about-us.html">Tentang Kami</a>
-            <a class="menu-item" href="/view/contact.html">Kontak</a>
+          <div class="menu-wrapper">
+            <div class="hamburger-menu">☰</div>
+            <div class="search-bar-wrapper">
+              <div class="search-box">
+                <form>
+                  <select class="select-search">
+                    <option value="all-category">All Category</option>
+                    <option value="kopi">Kopi</option>
+                    <option value="mesin-kopi">Mesin Kopi</option>
+                  </select>
+                  <input class="input-search" type="text" value="" placeholder="search..."></input>
+                  <button class="submit-search" type="submit">
+                    <img src="/src/images/search-icon.png" alt="srch" />
+                  </button>
+                </form>
+              </div>
+            </div>
+            <ul class="menu-list">
+              <li class="menu-item active">
+                <a href="/view/index.html">Beranda</a>
+              </li>
+              <li class="menu-item">
+                <a href="/view/about-us.html">Tentang Kami</a>
+              </li>
+              <li class="menu-item">
+                <a href="/view/contact.html">Kontak</a>
+              </li>
+              <li class="menu-item">
+                <a href="/view/shipping.html">Pengiriman</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -143,8 +167,7 @@
           <img src="/src/images/coffe-icon.png" alt="logo" />
         </div>
         <div class="menu-list">
-          <a class="menu-item" href="#">Tokopedia</a>
-          <a class="menu-item" href="#">Shopee</a>
+          <a class="menu-item" href="/view/index.html">Beranda</a>
           <a class="menu-item" href="/view/about-us.html">Tentang Kami</a>
           <a class="menu-item" href="/view/contact.html">Kontak</a>
         </div>
@@ -176,9 +199,7 @@
       </div>
       <div class="copyright">
         <div class="container-coffee">
-          <div>
-            cs@coffee_brand.com
-          </div>
+          <div>cs@coffee_brand.com</div>
           <div>
             © <span class="year"></span> Coffee Brand. All rights reserved.
           </div>
