@@ -10,6 +10,10 @@
     <link rel="icon" href="/src/images/coffee-icon.png" />
     <link rel="stylesheet" href="/src/styles/common.css" />
     <link rel="stylesheet" href="/src/styles/coffee-machine.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>Coffee Brand</title>
   </head>
   <body>
@@ -56,7 +60,55 @@
         </div>
       </nav>
       <div class="container-coffee">
-        <div class="page-title">Mesin Kopi</div>
+        <div class="product-video-wrapper">
+          <div class="container-coffee">
+            <div class="video-wrapper">
+              <div class="player-slide swiper mySwiper">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <iframe
+                        class="swiper-slide"
+                        type="text/html"
+                        width="100%"
+                        src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com">
+                      </iframe>
+                    </div>
+                    <div class="swiper-slide">
+                      <iframe
+                        class="swiper-slide"
+                        width="100%"
+                        height="360"
+                        src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com">
+                      </iframe>
+                    </div>
+                    <div class="swiper-slide">
+                      <iframe
+                        class="swiper-slide"
+                        type="text/html"
+                        width="100%"
+                        height="360"
+                        src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com">
+                      </iframe>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+            <div class="video-description">
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+              a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
+              from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+              Lorem Ipsum comes from sections 1.10.32
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-coffee">
         <div class="product-list">
           <div class="product-card-mobile">
             <div class="img-wrapper">
@@ -441,5 +493,24 @@
       </div>
     </footer>
     <script type="text/javascript" src="/src/scripts/scripts.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
