@@ -28,7 +28,7 @@ const src = (selector, value) => {
 
 const toggle = (selector, value) => {
   document.querySelector(selector).classList.toggle(value);
-}
+};
 
 const openSideDrawer = () => {
   showElement("#side-drawer");
@@ -44,14 +44,59 @@ const getYear = () => {
   return new Date().getFullYear();
 };
 
-const openModalProductMobile = (product) => {
+const setActiveImgOnMobile = (elem, img) => {
+  console.log(img);
+  src(".detail-product-modal img", img);
+
+  toggle(".detail-product-modal .image-list .img-wrapper.active", "active");
+  elem.classList.add("active");
+};
+
+const populateImageOnMobile = (image_list) => {
+  let imgList = "";
+  image_list?.length > 0 &&
+    image_list.forEach((image, idx) => {
+      const className = `img-wrapper ${idx === 0 ? "active" : ""}`;
+      imgList += `
+        <div class="${className}" onclick="setActiveImgOnMobile(this, '${image}')">
+          <img src="${image}" alt=" " />
+        </div>
+      `;
+    });
+  innerHTML(".detail-product-modal .image-list", imgList);
+};
+
+const openModalImage = (product) => {
   const maxMobile = 768;
-  if (window.innerWidth >= maxMobile) {
+  if (window.innerWidth < maxMobile) {
     return;
   }
 
+  const imageList = product?.image_list || product?.img;
+
+  showElement(".image-product-modal");
+  innerHTML(".image-product-modal .modal-name", product?.name);
+  src(".image-product-modal .focused-img-wrapper img", imageList[0]);
+
+  populateImageOnModal(imageList);
+  lockScrolling();
+};
+
+const openModalProductMobile = (product, isCoffeePage) => {
+  const maxMobile = 768;
+  if (window.innerWidth >= maxMobile && !isCoffeePage) {
+    return;
+  }
+
+  if (window.innerWidth >= maxMobile && isCoffeePage) {
+    return openModalImage(product);
+  }
+
   showElement(".detail-product-modal");
-  src(".detail-product-modal img", product?.img);
+  src(
+    ".detail-product-modal img",
+    product.img.length > 0 ? product.img[0] : ""
+  );
   innerHTML(".detail-product-modal .title", product?.name);
   innerHTML(".detail-product-modal .product-price", product?.price);
   innerHTML(".detail-product-modal .product-description", product?.description);
@@ -71,25 +116,26 @@ const openModalProductMobile = (product) => {
       }</a>`;
   });
   innerHTML(".detail-product-modal .marketplaces", marketplacesElement);
+  console.log(product.img);
+  populateImageOnMobile(product.img);
 
   lockScrolling();
 };
 
-const setActiveImg = (elem, img) => {
-  console.log(img);
+const setActiveImgOnModal = (elem, img) => {
   src(".image-product-modal .focused-img-wrapper img", img);
 
   toggle(".image-product-modal .image-list .img-wrapper.active", "active");
   elem.classList.add("active");
 };
 
-const populateImage = (image_list) => {
+const populateImageOnModal = (image_list) => {
   let imgList = "";
   image_list?.length > 0 &&
     image_list.forEach((image, idx) => {
-      const className = `img-wrapper ${idx === 0 ? 'active' : ''}`;
+      const className = `img-wrapper ${idx === 0 ? "active" : ""}`;
       imgList += `
-        <div class="${className}" onclick="setActiveImg(this, '${image}')">
+        <div class="${className}" onclick="setActiveImgOnModal(this, '${image}')">
           <img src="${image}" alt=" " />
         </div>
       `;
@@ -97,15 +143,20 @@ const populateImage = (image_list) => {
   innerHTML(".image-product-modal .image-list", imgList);
 };
 
-const openModalImage = (product) => {
-  console.log(product);
-
-  showElement(".image-product-modal");
-  innerHTML(".image-product-modal .modal-name", product?.name);
-  src(".image-product-modal .focused-img-wrapper img", product?.image_list[0]);
-
-  populateImage(product?.image_list);
-  lockScrolling();
+const keyPressEsc = () => {
+  document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+      isEscape = evt.key === "Escape" || evt.key === "Esc";
+    } else {
+      isEscape = evt.keyCode === 27;
+    }
+    if (isEscape) {
+      hideElement(".detail-product-modal");
+      hideElement(".image-product-modal");
+    }
+  };
 };
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -169,6 +220,8 @@ window.addEventListener("DOMContentLoaded", () => {
       ?.addEventListener("click", () => {
         window.location.replace("/view/coffee-machine.html");
       });
+
+    keyPressEsc();
 
     const yearElement = document.querySelector(".year");
     yearElement.innerHTML = getYear();

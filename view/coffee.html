@@ -95,7 +95,13 @@
             <div
               class="product-item"
               onclick="openModalProductMobile({
-              img: '/src/images/coffee-page/product-coffee-1.png',
+              img: [
+                '/src/images/coffee-page/product-coffee-1.png',
+                '/src/images/coffee-page/product-coffee-2.png',
+                '/src/images/coffee-page/product-coffee-3.png',
+                '/src/images/coffee-page/product-coffee-4.png',
+                '/src/images/coffee-page/product-coffee-5.png',
+              ],
               name: 'SF Bay Coffee Fog Chaser Whole Bean 2LB (32 Ounce)',
               price: 'Rp 1.800.000',
               description: 'With new Nespresso Gran Lattissima, there is a way for all your latte wishes. With six different recipe options at the touch of a button and an easy rinsing system, the Gran Lattissima does the work while you lean back.',
@@ -112,7 +118,7 @@
                   button_color: '#F94D2F',
                   font_color: '#FFFFFF',
                 },
-              ]})"
+              ]}, 'isCoffeePage')"
             >
               <div class="img-wrapper">
                 <img
@@ -146,7 +152,13 @@
             <div
               class="product-item"
               onclick="openModalProductMobile({
-              img: '/src/images/coffee-page/product-coffee-2.png',
+              img: [
+                '/src/images/coffee-page/product-coffee-1.png',
+                '/src/images/coffee-page/product-coffee-2.png',
+                '/src/images/coffee-page/product-coffee-3.png',
+                '/src/images/coffee-page/product-coffee-4.png',
+                '/src/images/coffee-page/product-coffee-5.png',
+              ],
               name: 'SF Bay Coffee Fog Chaser Whole Bean 2LB (32 Ounce)',
               price: 'Rp 1.100.000',
               description: 'With new Nespresso Gran Lattissima, there is a way for all your latte wishes. With six different recipe options at the touch of a button and an easy rinsing system, the Gran Lattissima does the work while you lean back.',
@@ -163,7 +175,7 @@
                   button_color: '#F94D2F',
                   font_color: '#FFFFFF',
                 },
-              ]})"
+              ]}, 'isCoffeePage')"
             >
               <div class="img-wrapper">
                 <img
@@ -369,11 +381,31 @@
               <div class="image-wrapper-mobile">
                 <img alt="img product" />
               </div>
+              <div class="image-list">
+              </div>
               <div class="product-detail">
                 <div class="title"></div>
                 <div class="product-price"></div>
                 <div class="product-description"></div>
                 <div class="marketplaces"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image-product-modal">
+        <div class="modal-content">
+          <div class="top-modal">
+            <div class="modal-name"></div>
+            <div class="close-button">X</div>
+          </div>
+          <div class="modal-inner">
+            <div class="focused-img-wrapper">
+              <img src="" alt=" " />
+            </div>
+            <div class="image-list-wrapper">
+              <div class="title">Foto Barang</div>
+              <div class="image-list">
               </div>
             </div>
           </div>
@@ -410,8 +442,6 @@
           <img src="/src/images/coffe-icon.png" alt="logo" />
         </div>
         <div class="menu-list">
-          <a class="menu-item" href="#">Tokopedia</a>
-          <a class="menu-item" href="#">Shopee</a>
           <a class="menu-item" href="/view/about-us.html">Tentang Kami</a>
           <a class="menu-item" href="/view/contact.html">Kontak</a>
         </div>

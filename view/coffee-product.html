@@ -59,7 +59,16 @@
         <div class="page-title">Kopi</div>
         <div class="product-list">
           <div class="product-card-mobile">
-            <div class="img-wrapper">
+            <div class="img-wrapper" onclick="openModalImage({
+              name: 'Creatista Plus',
+              image_list: [
+                '/src/images/coffee-page/product-coffee-1.png',
+                '/src/images/coffee-page/product-coffee-2.png',
+                '/src/images/coffee-page/product-coffee-3.png',
+                '/src/images/coffee-page/product-coffee-4.png',
+                '/src/images/coffee-page/product-coffee-5.png',
+              ]
+            })">
               <img
                 src="/src/images/coffee-page/product-coffee-1.png"
                 alt="product"
@@ -78,7 +87,13 @@
               <div
                 class="button mobile-only"
                 onclick="openModalProductMobile({
-                img: '/src/images/coffee-page/product-coffee-1.png',
+                img: [
+                  '/src/images/coffee-page/product-coffee-1.png',
+                  '/src/images/coffee-page/product-coffee-2.png',
+                  '/src/images/coffee-page/product-coffee-3.png',
+                  '/src/images/coffee-page/product-coffee-4.png',
+                  '/src/images/coffee-page/product-coffee-5.png',
+                ],
                 name: 'Creatista Plus',
                 price: 'Rp 4.000.000',
                 description: 'Enjoy barista-style quality coffee recipes with the Creatista Plus coffee machine. Create unique latte art and a broad range of delightful milk-based recipes.',
@@ -121,7 +136,16 @@
             </div>
           </div>
           <div class="product-card-mobile">
-            <div class="img-wrapper">
+            <div class="img-wrapper" onclick="openModalImage({
+              name: 'Gran Lattissima',
+              image_list: [
+                '/src/images/coffee-page/product-coffee-2.png',
+                '/src/images/coffee-page/product-coffee-1.png',
+                '/src/images/coffee-page/product-coffee-3.png',
+                '/src/images/coffee-page/product-coffee-4.png',
+                '/src/images/coffee-page/product-coffee-5.png',
+              ]
+            })">
               <img
                 src="/src/images/coffee-page/product-coffee-2.png"
                 alt="product"
@@ -140,7 +164,13 @@
               <div
                 class="button mobile-only"
                 onclick="openModalProductMobile({
-                img: '/src/images/coffee-page/product-coffee-1.png',
+                img: [
+                  '/src/images/coffee-page/product-coffee-2.png',
+                  '/src/images/coffee-page/product-coffee-1.png',
+                  '/src/images/coffee-page/product-coffee-3.png',
+                  '/src/images/coffee-page/product-coffee-4.png',
+                  '/src/images/coffee-page/product-coffee-5.png',
+                ],
                 name: 'Gran Lattissima',
                 price: 'Rp 4.200.000',
                 description: 'With new Nespresso Gran Lattissima, there is a way for all your latte wishes. With six different recipe options at the touch of a button and an easy rinsing system, the Gran Lattissima does the work while you lean back.',
@@ -358,11 +388,31 @@
                 <div class="image-wrapper-mobile">
                   <img alt="img product" />
                 </div>
+                <div class="image-list">
+                </div>
                 <div class="product-detail">
                   <div class="title"></div>
                   <div class="product-price"></div>
                   <div class="product-description"></div>
                   <div class="marketplaces"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-product-modal">
+          <div class="modal-content">
+            <div class="top-modal">
+              <div class="modal-name"></div>
+              <div class="close-button">X</div>
+            </div>
+            <div class="modal-inner">
+              <div class="focused-img-wrapper">
+                <img src="" alt=" " />
+              </div>
+              <div class="image-list-wrapper">
+                <div class="title">Foto Barang</div>
+                <div class="image-list">
                 </div>
               </div>
             </div>
@@ -400,8 +450,6 @@
           <img src="/src/images/coffe-icon.png" alt="logo" />
         </div>
         <div class="menu-list">
-          <a class="menu-item" href="#">Tokopedia</a>
-          <a class="menu-item" href="#">Shopee</a>
           <a class="menu-item" href="/view/about-us.html">Tentang Kami</a>
           <a class="menu-item" href="/view/contact.html">Kontak</a>
         </div>

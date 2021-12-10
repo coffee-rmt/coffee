@@ -148,7 +148,6 @@
                   '/src/images/products/dummy-product-3.png',
                   '/src/images/products/dummy-product-4.png',
                   '/src/images/products/dummy-product-5.png',
-                  '/src/images/products/dummy-product-6.png',
                 ],
                 name: 'Creatista Plus',
                 price: 'Rp 4.000.000',
@@ -211,7 +210,13 @@
               <div
                 class="button mobile-only"
                 onclick="openModalProductMobile({
-                img: '/src/images/products/dummy-product-2.png',
+                img: [
+                  '/src/images/products/dummy-product-1.png',
+                  '/src/images/products/dummy-product-2.png',
+                  '/src/images/products/dummy-product-3.png',
+                  '/src/images/products/dummy-product-4.png',
+                  '/src/images/products/dummy-product-5.png',
+                ],
                 name: 'Gran Lattissima',
                 price: 'Rp 4.200.000',
                 description: 'With new Nespresso Gran Lattissima, there is a way for all your latte wishes. With six different recipe options at the touch of a button and an easy rinsing system, the Gran Lattissima does the work while you lean back.',
@@ -429,6 +434,8 @@
                 <div class="image-wrapper-mobile">
                   <img alt="img product" />
                 </div>
+                <div class="image-list">
+                </div>
                 <div class="product-detail">
                   <div class="title"></div>
                   <div class="product-price"></div>
@@ -489,8 +496,6 @@
           <img src="/src/images/coffe-icon.png" alt="logo" />
         </div>
         <div class="menu-list">
-          <a class="menu-item" href="#">Tokopedia</a>
-          <a class="menu-item" href="#">Shopee</a>
           <a class="menu-item" href="/view/about-us.html">Tentang Kami</a>
           <a class="menu-item" href="/view/contact.html">Kontak</a>
         </div>
