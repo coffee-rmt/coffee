@@ -211,6 +211,7 @@
 
   .product-list .product-card-mobile img {
     width: 100%;
+    cursor: pointer;
   }
 
   .product-list .product-card-mobile .product-detail {

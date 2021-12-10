@@ -60,58 +60,68 @@
         </div>
       </nav>
       <div class="container-coffee">
-        <div class="product-video-wrapper">
-          <div class="container-coffee">
-            <div class="video-wrapper">
-              <div class="player-slide swiper mySwiper">
-                <div class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <iframe
-                        class="swiper-slide"
-                        type="text/html"
-                        width="100%"
-                        src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com">
-                      </iframe>
-                    </div>
-                    <div class="swiper-slide">
-                      <iframe
-                        class="swiper-slide"
-                        width="100%"
-                        height="360"
-                        src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com">
-                      </iframe>
-                    </div>
-                    <div class="swiper-slide">
-                      <iframe
-                        class="swiper-slide"
-                        type="text/html"
-                        width="100%"
-                        height="360"
-                        src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com">
-                      </iframe>
-                    </div>
+        <div class="page-title">Mesin Kopi</div>
+      </div>
+      <div class="product-video-wrapper">
+        <div class="container-coffee">
+          <div class="video-wrapper">
+            <div class="player-slide swiper mySwiper">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <iframe
+                      class="swiper-slide"
+                      type="text/html"
+                      width="100%"
+                      src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com">
+                    </iframe>
                   </div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-pagination"></div>
+                  <div class="swiper-slide">
+                    <iframe
+                      class="swiper-slide"
+                      width="100%"
+                      height="360"
+                      src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com">
+                    </iframe>
+                  </div>
+                  <div class="swiper-slide">
+                    <iframe
+                      class="swiper-slide"
+                      type="text/html"
+                      width="100%"
+                      height="360"
+                      src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com">
+                    </iframe>
+                  </div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
-            <div class="video-description">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-              a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
-              from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-              Lorem Ipsum comes from sections 1.10.32
-            </div>
+          </div>
+          <div class="video-description">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+            a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
+            from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+            Lorem Ipsum comes from sections 1.10.32
           </div>
         </div>
       </div>
       <div class="container-coffee">
         <div class="product-list">
           <div class="product-card-mobile">
-            <div class="img-wrapper">
+            <div class="img-wrapper" onclick="openModalImage({
+              name: 'Creatista Plus',
+              image_list: [
+                '/src/images/products/dummy-product-1.png',
+                '/src/images/products/dummy-product-2.png',
+                '/src/images/products/dummy-product-3.png',
+                '/src/images/products/dummy-product-4.png',
+                '/src/images/products/dummy-product-5.png',
+              ]
+            })">
               <img
                 src="/src/images/products/dummy-product-1.png"
                 alt="product"
@@ -130,7 +140,14 @@
               <div
                 class="button mobile-only"
                 onclick="openModalProductMobile({
-                img: '/src/images/products/dummy-product-1.png',
+                img: [
+                  '/src/images/products/dummy-product-1.png',
+                  '/src/images/products/dummy-product-2.png',
+                  '/src/images/products/dummy-product-3.png',
+                  '/src/images/products/dummy-product-4.png',
+                  '/src/images/products/dummy-product-5.png',
+                  '/src/images/products/dummy-product-6.png',
+                ],
                 name: 'Creatista Plus',
                 price: 'Rp 4.000.000',
                 description: 'Enjoy barista-style quality coffee recipes with the Creatista Plus coffee machine. Create unique latte art and a broad range of delightful milk-based recipes.',
@@ -415,6 +432,24 @@
                   <div class="product-price"></div>
                   <div class="product-description"></div>
                   <div class="marketplaces"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-product-modal">
+          <div class="modal-content">
+            <div class="top-modal">
+              <div class="modal-name"></div>
+              <div class="close-button">X</div>
+            </div>
+            <div class="modal-inner">
+              <div class="focused-img-wrapper">
+                <img src="" alt=" " />
+              </div>
+              <div class="image-list-wrapper">
+                <div class="title">Foto Barang</div>
+                <div class="image-list">
                 </div>
               </div>
             </div>

@@ -18,6 +18,18 @@ const openScrolling = () => {
   bodyElement.style.overflow = "visible";
 };
 
+const innerHTML = (selector, value) => {
+  document.querySelector(selector).innerHTML = value;
+};
+
+const src = (selector, value) => {
+  document.querySelector(selector).src = value;
+};
+
+const toggle = (selector, value) => {
+  document.querySelector(selector).classList.toggle(value);
+}
+
 const openSideDrawer = () => {
   showElement("#side-drawer");
   lockScrolling();
@@ -37,17 +49,12 @@ const openModalProductMobile = (product) => {
   if (window.innerWidth >= maxMobile) {
     return;
   }
-  const modalElement = document.querySelector(".detail-product-modal");
-  modalElement.style.display = "block";
 
-  document.querySelector(".detail-product-modal img").src = product?.img;
-  document.querySelector(".detail-product-modal .title").innerHTML =
-    product?.name;
-  document.querySelector(".detail-product-modal .product-price").innerHTML =
-    product?.price;
-  document.querySelector(
-    ".detail-product-modal .product-description"
-  ).innerHTML = product?.description;
+  showElement(".detail-product-modal");
+  src(".detail-product-modal img", product?.img);
+  innerHTML(".detail-product-modal .title", product?.name);
+  innerHTML(".detail-product-modal .product-price", product?.price);
+  innerHTML(".detail-product-modal .product-description", product?.description);
 
   let marketplacesElement = "";
   product.marketplaces?.forEach((marketplace) => {
@@ -63,10 +70,41 @@ const openModalProductMobile = (product) => {
         marketplace.name
       }</a>`;
   });
+  innerHTML(".detail-product-modal .marketplaces", marketplacesElement);
 
-  document.querySelector(".detail-product-modal .marketplaces").innerHTML =
-    marketplacesElement;
+  lockScrolling();
+};
 
+const setActiveImg = (elem, img) => {
+  console.log(img);
+  src(".image-product-modal .focused-img-wrapper img", img);
+
+  toggle(".image-product-modal .image-list .img-wrapper.active", "active");
+  elem.classList.add("active");
+};
+
+const populateImage = (image_list) => {
+  let imgList = "";
+  image_list?.length > 0 &&
+    image_list.forEach((image, idx) => {
+      const className = `img-wrapper ${idx === 0 ? 'active' : ''}`;
+      imgList += `
+        <div class="${className}" onclick="setActiveImg(this, '${image}')">
+          <img src="${image}" alt=" " />
+        </div>
+      `;
+    });
+  innerHTML(".image-product-modal .image-list", imgList);
+};
+
+const openModalImage = (product) => {
+  console.log(product);
+
+  showElement(".image-product-modal");
+  innerHTML(".image-product-modal .modal-name", product?.name);
+  src(".image-product-modal .focused-img-wrapper img", product?.image_list[0]);
+
+  populateImage(product?.image_list);
   lockScrolling();
 };
 
@@ -95,15 +133,28 @@ window.addEventListener("DOMContentLoaded", () => {
       });
 
     document
+      .querySelector(".image-product-modal")
+      ?.addEventListener("click", (event) => {
+        if (("event", event.path[0].className === "image-product-modal")) {
+          hideElement(".image-product-modal");
+          openScrolling();
+        }
+      });
+
+    document
+      .querySelector(".image-product-modal .close-button")
+      ?.addEventListener("click", (event) => {
+        hideElement(".image-product-modal");
+        openScrolling();
+      });
+
+    document
       .querySelector(".modal-content .close-button")
       ?.addEventListener("click", (event) => {
         event.preventDefault();
         hideElement(".detail-product-modal");
         openScrolling();
       });
-
-    const yearElement = document.querySelector(".year");
-    yearElement.innerHTML = getYear();
 
     document.querySelector("#index-page")?.addEventListener("click", () => {
       window.location.replace("/view/index.html");
@@ -118,6 +169,12 @@ window.addEventListener("DOMContentLoaded", () => {
       ?.addEventListener("click", () => {
         window.location.replace("/view/coffee-machine.html");
       });
+
+    const yearElement = document.querySelector(".year");
+    yearElement.innerHTML = getYear();
+
+    hideElement(".detail-product-modal");
+    hideElement(".image-product-modal");
   } catch (err) {
     console.error(err);
   }
