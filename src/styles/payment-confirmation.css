@@ -53,3 +53,19 @@
   border: 0;
   padding-left: 0;
 }
+
+@media screen and (min-width: 768px) {
+  .payment-confirmation {
+    display: flex;
+    gap: 32px;
+  }
+
+  .payment-confirmation .payment-info-card {
+    height: fit-content;
+    width: 40%;
+  }
+
+  .payment-confirmation .payment-card {
+    width: 60%;
+  }
+}
