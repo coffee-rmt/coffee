@@ -164,7 +164,7 @@ body {
 }
 
 #side-drawer .menu-item.active {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   border-radius: 8px;
 }
 
@@ -1070,4 +1070,29 @@ footer .copyright .container-coffee {
   .top-nav .menu-wrapper {
     flex-direction: row;
   }
+}
+
+.search-bar-wrapper .search-box {
+  float: none !important;
+  margin: 0 !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  cursor: pointer !important;
+  -webkit-box-sizing: unset !important;
+  box-sizing: unset !important;
+}
+
+.search-bar-wrapper .input-search {
+  padding: 10px 10px;
+}
+
+.input-wrapper select {
+  background: #fdfdfd;
+  border: 2px solid #c0c0c0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 8px 8px;
+  height: 40px;
+  color: #1f1f1f;
 }
