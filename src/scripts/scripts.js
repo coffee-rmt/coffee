@@ -100,6 +100,8 @@ const openModalProductMobile = (product, isCoffeePage) => {
   innerHTML(".detail-product-modal .title", product?.name);
   innerHTML(".detail-product-modal .product-price", product?.price);
   innerHTML(".detail-product-modal .product-description", product?.description);
+  
+  product?.before_discount_price && innerHTML(".detail-product-modal .product-discount", product?.before_discount_price);
 
   let marketplacesElement = "";
   product.marketplaces?.forEach((marketplace) => {
@@ -144,7 +146,7 @@ const populateImageOnModal = (image_list) => {
 };
 
 const keyPressEsc = () => {
-  document.onkeydown = function (evt) {
+  document.onkeydown = (evt) => {
     evt = evt || window.event;
     var isEscape = false;
     if ("key" in evt) {
@@ -155,6 +157,7 @@ const keyPressEsc = () => {
     if (isEscape) {
       hideElement(".detail-product-modal");
       hideElement(".image-product-modal");
+      openScrolling();
     }
   };
 };

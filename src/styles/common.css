@@ -754,6 +754,17 @@ footer .copyright .container-coffee {
   margin-bottom: 16px;
 }
 
+.detail-product-modal .product-detail .product-discount {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.04em;
+  color: #656565;
+  margin-top: 6px;
+  text-decoration: line-through;
+  margin-top: -12px;
+  margin-bottom: 12px;
+}
+
 .detail-product-modal .product-detail .marketplaces {
   gap: 16px;
   display: flex;

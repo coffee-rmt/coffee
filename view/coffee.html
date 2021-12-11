@@ -92,6 +92,7 @@
             <a href="/view/coffee-product.html" class="see-all">Lihat Semua ></a>
           </div>
           <div class="product-list">
+            
             <div
               class="product-item"
               onclick="openModalProductMobile({
@@ -103,7 +104,9 @@
                 '/src/images/coffee-page/product-coffee-5.png',
               ],
               name: 'SF Bay Coffee Fog Chaser Whole Bean 2LB (32 Ounce)',
-              price: 'Rp 1.800.000',
+              price: 'Rp 1.500.000',
+              before_discount_price: 'Rp 1.800.000',
+              discount_percentage: '20%',
               description: 'With new Nespresso Gran Lattissima, there is a way for all your latte wishes. With six different recipe options at the touch of a button and an easy rinsing system, the Gran Lattissima does the work while you lean back.',
               marketplaces: [
                 {
@@ -121,6 +124,11 @@
               ]}, 'isCoffeePage')"
             >
               <div class="img-wrapper">
+                <!-- discount -->
+                <div class="discount-tag">
+                  <div class="discount-percentage">20%</div>
+                  <div class="discount-text">OFF</div>
+                </div>
                 <img
                   src="/src/images/coffee-page/product-coffee-1.png"
                   alt="coffee"
@@ -149,6 +157,7 @@
                 </a>
               </div>
             </div>
+
             <div
               class="product-item"
               onclick="openModalProductMobile({
@@ -160,7 +169,9 @@
                 '/src/images/coffee-page/product-coffee-5.png',
               ],
               name: 'SF Bay Coffee Fog Chaser Whole Bean 2LB (32 Ounce)',
-              price: 'Rp 1.100.000',
+              price: 'Rp 1.000.000',
+              before_discount_price: 'Rp 1.100.000',
+              discount_percentage: '10%',
               description: 'With new Nespresso Gran Lattissima, there is a way for all your latte wishes. With six different recipe options at the touch of a button and an easy rinsing system, the Gran Lattissima does the work while you lean back.',
               marketplaces: [
                 {
@@ -178,6 +189,11 @@
               ]}, 'isCoffeePage')"
             >
               <div class="img-wrapper">
+                <!-- discount -->
+                <div class="discount-tag">
+                  <div class="discount-percentage">10%</div>
+                  <div class="discount-text">OFF</div>
+                </div>
                 <img
                   src="/src/images/coffee-page/product-coffee-2.png"
                   alt="coffee"
@@ -206,6 +222,7 @@
                 </a>
               </div>
             </div>
+
             <div class="product-item">
               <div class="img-wrapper">
                 <img
@@ -236,6 +253,7 @@
                 </a>
               </div>
             </div>
+
             <div class="product-item">
               <div class="img-wrapper">
                 <img
@@ -266,6 +284,7 @@
                 </a>
               </div>
             </div>
+
             <div class="product-item">
               <div class="img-wrapper">
                 <img
@@ -296,6 +315,7 @@
                 </a>
               </div>
             </div>
+
             <div class="product-item">
               <div class="img-wrapper">
                 <img
@@ -327,6 +347,7 @@
               </div>
             </div>
           </div>
+
         </div>
         <div class="brand-card">
           <div class="brand-container">
@@ -385,7 +406,10 @@
               </div>
               <div class="product-detail">
                 <div class="title"></div>
-                <div class="product-price"></div>
+                <div class="price-wrapper">
+                  <div class="product-price"></div>
+                  <div class="product-discount"></div>
+                </div>
                 <div class="product-description"></div>
                 <div class="marketplaces"></div>
               </div>

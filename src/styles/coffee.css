@@ -98,6 +98,46 @@
   max-width: 180px;
   min-width: 180px;
   padding: 12px;
+  position: relative;
+}
+
+.product-list .discount-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background: #ebc726;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-list .discount-percentage {
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: 0.04em;
+  color: #ee4d2d;
+}
+
+.product-list .discount-text {
+  font-size: 10px;
+  line-height: 11px;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.product-list .discount-text:after {
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0;
+  bottom: -4px;
+  position: absolute;
+  border-color: transparent #b6d61dbd;
+  border-style: solid;
+  border-width: 0 16px 4px;
 }
 
 .product-list .img-wrapper {
@@ -370,6 +410,25 @@
 
   .product-list .product-item .marketplace-button .button {
     height: 40px;
+  }
+
+  .product-list .discount-tag {
+    width: 36px;
+    height: 36px;
+  }
+
+  .product-list .discount-text:after {
+    border-width: 0 18px 4px;
+  }
+
+  .product-list .discount-percentage {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  
+  .product-list .discount-text {
+    font-size: 12px;
+    margin-top: 4px;
   }
 }
 

@@ -58,6 +58,7 @@
       <div class="container-coffee">
         <div class="page-title">Kopi</div>
         <div class="product-list">
+
           <div class="product-card-mobile">
             <div class="img-wrapper" onclick="openModalImage({
               name: 'Creatista Plus',
@@ -69,6 +70,11 @@
                 '/src/images/coffee-page/product-coffee-5.png',
               ]
             })">
+              <!-- discount -->
+              <div class="discount-tag">
+                <div class="discount-percentage">10%</div>
+                <div class="discount-text">OFF</div>
+              </div>
               <img
                 src="/src/images/coffee-page/product-coffee-1.png"
                 alt="product"
@@ -95,7 +101,9 @@
                   '/src/images/coffee-page/product-coffee-5.png',
                 ],
                 name: 'Creatista Plus',
-                price: 'Rp 4.000.000',
+                price: 'Rp 3.600.000',
+                before_discount_price: 'Rp 4.200.000',
+                discount_percentage: '10%',
                 description: 'Enjoy barista-style quality coffee recipes with the Creatista Plus coffee machine. Create unique latte art and a broad range of delightful milk-based recipes.',
                 marketplaces: [
                   {
@@ -135,6 +143,7 @@
               </div>
             </div>
           </div>
+
           <div class="product-card-mobile">
             <div class="img-wrapper" onclick="openModalImage({
               name: 'Gran Lattissima',
@@ -146,6 +155,11 @@
                 '/src/images/coffee-page/product-coffee-5.png',
               ]
             })">
+              <!-- discount -->
+              <div class="discount-tag">
+                <div class="discount-percentage">20%</div>
+                <div class="discount-text">OFF</div>
+              </div>
               <img
                 src="/src/images/coffee-page/product-coffee-2.png"
                 alt="product"
@@ -212,6 +226,7 @@
               </div>
             </div>
           </div>
+
           <div class="product-card-mobile">
             <div class="img-wrapper">
               <img
@@ -253,121 +268,7 @@
               </div>
             </div>
           </div>
-          <div class="product-card-mobile">
-            <div class="img-wrapper">
-              <img
-                src="/src/images/coffee-page/product-coffee-4.png"
-                alt="product"
-              />
-            </div>
-            <div class="product-detail">
-              <div class="detail-wrapper">
-                <div class="product-name">CitiZ & Aeroccino Bundle</div>
-                <div class="product-price">Rp 11.200.000</div>
-                <div class="product-description">
-                  Enjoy barista-style quality coffee recipes with the Creatista
-                  Plus coffee machine. Create unique latte art and a broad range
-                  of delightful milk-based recipes.
-                </div>
-              </div>
-              <div class="button mobile-only">Detail</div>
-              <div class="marketplace-button">
-                <a
-                  href="https://www.tokopedia.com"
-                  class="button"
-                  style="background-color: #03ac0e; color: #ffffff"
-                  target="_blank"
-                >
-                  Tokopedia
-                </a>
-                <a
-                  href="https://shopee.co.id"
-                  class="button"
-                  style="background-color: #f94d2f; color: #ffffff"
-                  target="_blank"
-                >
-                  Shopee
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="product-card-mobile">
-            <div class="img-wrapper">
-              <img
-                src="/src/images/coffee-page/product-coffee-5.png"
-                alt="product"
-              />
-            </div>
-            <div class="product-detail">
-              <div class="detail-wrapper">
-                <div class="product-name">
-                  Pixie Electric Red & Aeroccino3 Red Bundle
-                </div>
-                <div class="product-price">Rp 3.000.000</div>
-                <div class="product-description">
-                  Enjoy barista-style quality coffee recipes with the Creatista
-                  Plus coffee machine. Create unique latte art and a broad range
-                  of delightful milk-based recipes.
-                </div>
-              </div>
-              <div class="button mobile-only">Detail</div>
-              <div class="marketplace-button">
-                <a
-                  href="https://www.tokopedia.com"
-                  class="button"
-                  style="background-color: #03ac0e; color: #ffffff"
-                  target="_blank"
-                >
-                  Tokopedia
-                </a>
-                <a
-                  href="https://shopee.co.id"
-                  class="button"
-                  style="background-color: #f94d2f; color: #ffffff"
-                  target="_blank"
-                >
-                  Shopee
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="product-card-mobile">
-            <div class="img-wrapper">
-              <img
-                src="/src/images/coffee-page/product-coffee-6.png"
-                alt="product"
-              />
-            </div>
-            <div class="product-detail">
-              <div class="detail-wrapper">
-                <div class="product-name">Creatista Plus</div>
-                <div class="product-price">Rp 4.700.000</div>
-                <div class="product-description">
-                  Pixie is the most ergonomic and compact model with a range of
-                  innovative and advanced features. Includes Aeroccino milk
-                  frother to make creamy milk froth.
-                </div>
-              </div>
-              <div class="button mobile-only">Detail</div>
-              <div class="marketplace-button">
-                <a
-                  href="https://www.tokopedia.com"
-                  class="button"
-                  style="background-color: #03ac0e; color: #ffffff"
-                  target="_blank"
-                >
-                  Tokopedia
-                </a>
-                <a
-                  href="https://shopee.co.id"
-                  class="button"
-                  style="background-color: #f94d2f; color: #ffffff"
-                  target="_blank"
-                >
-                  Shopee
-                </a>
-              </div>
-            </div>
+
           </div>
         </div>
         <div class="product-pagination-mobile button">Lihat Selanjutnya</div>
@@ -392,7 +293,10 @@
                 </div>
                 <div class="product-detail">
                   <div class="title"></div>
-                  <div class="product-price"></div>
+                  <div class="price-wrapper">
+                    <div class="product-price"></div>
+                    <div class="product-discount"></div>
+                  </div>
                   <div class="product-description"></div>
                   <div class="marketplaces"></div>
                 </div>
