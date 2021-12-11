@@ -33,6 +33,8 @@ body {
   line-height: 18px;
   cursor: pointer;
   text-decoration: none;
+  border: none;
+  padding: 0 16px;
 }
 
 .container-coffee {

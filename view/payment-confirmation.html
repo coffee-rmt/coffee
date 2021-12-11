@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-control" content="public" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Coffee" />
+    <meta name="theme-color" content="#272727" />
+    <link rel="apple-touch-icon" href="/src/images/blue-logo.svg" />
+    <link rel="icon" href="/src/images/blue-logo.svg" />
+    <link rel="stylesheet" href="/src/styles/common.css" />
+    <link rel="stylesheet" href="/src/styles/payment-confirmation.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <title>Coffee Brand</title>
+  </head>
+  <body>
+    <main class="screen">
+      <nav class="top-nav">
+        <div class="top-nav-container">
+          <div class="logo-wrapper">
+            <a href="/view/index.html">
+              <img src="/src/images/blue-logo.svg" />
+            </a>
+          </div>
+          <div class="menu-wrapper">
+            <div class="hamburger-menu">☰</div>
+            <div class="search-bar-wrapper">
+              <div class="search-box">
+                <form>
+                  <select class="select-search">
+                    <option value="all-category">All Category</option>
+                    <option value="kopi">Kopi</option>
+                    <option value="mesin-kopi">Mesin Kopi</option>
+                  </select>
+                  <input class="input-search" type="text" value="" placeholder="search..."></input>
+                  <button class="submit-search" type="submit">
+                    <img src="/src/images/search-icon.png" alt="srch" />
+                  </button>
+                </form>
+              </div>
+            </div>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="/view/index.html">Beranda</a>
+              </li>
+              <li class="menu-item">
+                <a href="/view/about-us.html">Tentang Kami</a>
+              </li>
+              <li class="menu-item">
+                <a href="/view/contact.html">Kontak</a>
+              </li>
+              <li class="menu-item">
+                <a href="/view/shipping.html">Pengiriman</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-coffee">
+        <div class="page-title">Konfirmasi Pembayaran</div>
+        <div class="payment-confirmation">
+            <div class="payment-info-card">
+              Provident similique accusantium nemo autem. Veritatis
+              obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+              nihil, 
+            </div>
+            <div class="payment-card">
+              <form>
+                <div class="input-wrapper">
+                  <label>Nomor Order *</label>
+                  <input type="text" />
+                </div>
+                <div class="input-wrapper">
+                  <label>Email *</label>
+                  <input type="text" />
+                </div>
+                <img id="img-preview" class="image-preview" />
+                <div class="input-wrapper img-upload">
+                  <label>Bukti Transfer (jpg/png) *</label>
+                  <input type="file" accept="image/*" onchange="loadFile(event, '.image-preview')">
+                </div>
+                <button type="submit" class="button">Kirim Konfirmasi</input>
+              </form>
+            </div>
+        </div>
+      </div>
+      <nav class="bottom-nav">
+        <a href="#" class="nav-item" id="index-page">
+          <div class="img-wrapper">
+            <img src="/src/images/home.png" alt="beranda" />
+          </div>
+          <div class="title">Beranda</div>
+        </a>
+        <a href="#" class="nav-item" id="coffee-page">
+          <div class="img-wrapper">
+            <img
+              src="/src/images/coffee-pack.png"
+              alt="beranda"
+              style="opacity: 0.6"
+            />
+          </div>
+          <div class="title">Kopi</div>
+        </a>
+        <a href="#" class="nav-item" id="coffee-machine-page">
+          <div class="img-wrapper">
+            <img src="/src/images/coffee-machine.png" alt="beranda" />
+          </div>
+          <div class="title">Mesin Kopi</div>
+        </a>
+      </nav>
+    </main>
+    <div id="side-drawer">
+      <div class="drawer-left">
+        <div class="drawer-logo">
+          <img src="/src/images/blue-logo.svg" alt="logo" />
+        </div>
+        <div class="menu-list">
+          <a class="menu-item" href="/view/about-us.html">Tentang Kami</a>
+          <a class="menu-item" href="/view/contact.html">Kontak</a>
+          <a class="menu-item" href="/view/shipping.html">Pegiriman</a>
+        </div>
+      </div>
+      <div class="drawer-right">a</div>
+    </div>
+    <footer tabindex="0">
+      <div class="footer-content container-coffee">
+        <div class="footer-section">
+          <div class="footer-title">Coffe Brand</div>
+          <div class="footer-content-text">
+            Jl. Sejahtera No.24A, RT.04/RW.14, Gambir Tim., Kec. Gambir, Kota
+            Jakarta Pusat, Daerah Khusus Ibukota Jakarta 123456
+          </div>
+        </div>
+        <div class="footer-section right">
+          <div class="footer-title">Contact us</div>
+          <div>
+            <div class="footer-content-text">
+              <span class="bold">Telp:</span>
+              <span>082299110022</span>
+            </div>
+            <div class="footer-content-text">
+              <span class="bold">Istagram:</span>
+              <span>@coffee_brand</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container-coffee">
+          <div>cs@coffee_brand.com</div>
+          <div>
+            © <span class="year"></span> Coffee Brand. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/src/scripts/scripts.js"></script>
+  </body>
+</html>
