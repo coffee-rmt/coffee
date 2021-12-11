@@ -1,0 +1,57 @@
+.container-coffee {
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-title {
+  margin-left: -24px;
+}
+
+.shipping-wrapper .shipping-description {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: 0.04em;
+  color: #1f1f1f;
+}
+
+.shipping-wrapper .shipping-title {
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  color: #000000;
+  margin-top: 32px;
+}
+
+.shipping-wrapper:last-child {
+  margin-bottom: 100px;
+}
+
+.shipping-wrapper:first-child {
+  margin-top: 0px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .page-title {
+    margin-left: 0px;
+  }
+
+  .shipping-wrapper .shipping-description {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.09em;
+  }
+
+  .shipping-wrapper .shipping-title {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+
+  .shipping-wrapper:last-child {
+    margin-bottom: 60px;
+  }
+}
