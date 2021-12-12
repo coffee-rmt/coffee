@@ -15,6 +15,7 @@
   width: 100%;
   background-color: #c9d1d4;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .product-coffee-card .img-wrapper img {

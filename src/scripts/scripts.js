@@ -244,7 +244,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     hideElement(".detail-product-modal");
     hideElement(".image-product-modal");
+
   } catch (err) {
     console.error(err);
   }
 });
+
