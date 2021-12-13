@@ -85,6 +85,68 @@
   color: #1f1f1f;
 }
 
+/* our-service-list-slider */
+
+.our-service-list-slider {
+  display: flex;
+  overflow: scroll;
+  margin: 20px 0 80px;
+  gap: 24px;
+  padding: 12px;
+  margin-left: -12px;
+}
+
+.our-service-list-slider .our-service-slide:first-child {
+  margin-left: 24px;
+}
+
+.our-service-list-slider .our-service-slide:last-child {
+  margin-right: 24px;
+}
+
+.our-service-list-slider .illustration-image {
+  width: 100%;
+  height: 192px;
+}
+
+.our-service-list-slider .title {
+  background: #3e4444;
+  border-radius: 8px 8px 0px 0px;
+  padding: 12px;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-align: center;
+}
+
+.our-service-list-slider .illustration-image img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.our-service-list-slider .our-service-slide {
+  min-width: 248px;
+  background: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 8px 0px 8px 8px;
+  height: fit-content;
+}
+
+.our-service-list-slider .text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #1f1f1f;
+  padding: 16px;
+}
+
+.our-service-list-slider .button {
+  background: #bababa;
+  border-radius: 0px 0px 8px 8px;
+}
+
 /* responsive */
 
 @media screen and (min-width: 768px) {
@@ -122,6 +184,56 @@
     min-height: 206px;
     object-fit: cover;
   }
+
+  .our-service-list-slider {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .our-service-list-slider .our-service-slide {
+    display: flex;
+    width: 50%;
+    min-width: 564px;
+  }
+
+  .our-service-list-slider .title {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 50px;
+    min-height: fit-content;
+    box-sizing: border-box;
+  }
+
+  .our-service-list-slider .illustration-image {
+    width: 260px;
+    height: 208px;
+  }
+
+  .our-service-list-slider .illustration-image img {
+    border-bottom-left-radius: 8px;
+  }
+
+  .our-service-list-slider .text-button-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: left;
+  }
+
+  .our-service-list-slider .title {
+    border-radius: 8px 0 0 0;
+  }
+
+  .our-service-list-slider .text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .our-service-list-slider .button {
+    border-radius: 0 8px 0 0;
+    height: 50px;
+    justify-content: flex-end
+  }
 }
 
 html,
@@ -131,7 +243,6 @@ body {
 }
 
 body {
-  background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -182,4 +293,3 @@ body {
 .swiper-pagination-fraction {
   margin-left: calc(50% - 40px);
 }
-
