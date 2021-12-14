@@ -21,6 +21,10 @@
   gap: 16px;
 }
 
+.about-us-wrapper .about-us-left {
+  margin-bottom: 100px;
+}
+
 .about-us-wrapper .about-us-right {
   display: none;
   font-size: 18px;
