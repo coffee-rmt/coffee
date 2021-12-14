@@ -189,12 +189,13 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    overflow: auto;
   }
 
   .our-service-list-slider .our-service-slide {
     display: flex;
     width: 50%;
-    min-width: 564px;
+    min-width: 553px;
   }
 
   .our-service-list-slider .title {
