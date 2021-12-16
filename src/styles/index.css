@@ -31,6 +31,59 @@
 /* our service  */
 .our-service-list {
   padding: 24px;
+  margin-bottom: 40px;
+}
+
+.our-service-list .slider-wrapper {
+  margin-top: 52px;
+}
+
+.our-service-list .swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.our-service-slide .swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.our-service-list .swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.our-service-slide .swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.our-service-list
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  height: 8px;
+  width: 8px;
+}
+
+.our-service-slide
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  height: 8px;
+  width: 8px;
+}
+
+.our-service-list .swiper-wrapper {
+  height: 288px;
+}
+
+.our-service-list .swiper-wrapper {
+  max-height: 288px;
+  width: 100%;
+  object-fit: contain;
 }
 
 .our-service-card {
@@ -63,7 +116,7 @@
   align-items: center;
   width: 100%;
   padding: 16px 0;
-  background: rgba(62, 68, 68, 0.8);
+  background: #7e7e7e;
   border-radius: 8px 8px 0px 0px;
   color: #ffffff;
   font-size: 22px;
@@ -83,14 +136,15 @@
   font-size: 15px;
   line-height: 23px;
   color: #1f1f1f;
+  font-weight: 600;
 }
 
 /* our-service-list-slider */
 
 .our-service-list-slider {
-  display: flex;
+  display: none;
   overflow: scroll;
-  margin: 20px 0 80px;
+  margin: 60px 0 80px;
   gap: 24px;
   padding: 12px;
   margin-left: -12px;
@@ -165,7 +219,7 @@
   }
 
   .our-service-list {
-    display: flex;
+    display: none;
     max-width: 1200px;
     margin: auto;
     gap: 40px;
@@ -186,6 +240,7 @@
   }
 
   .our-service-list-slider {
+    display: flex;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -233,7 +288,7 @@
   .our-service-list-slider .button {
     border-radius: 0 8px 0 0;
     height: 50px;
-    justify-content: flex-end
+    justify-content: flex-end;
   }
 }
 

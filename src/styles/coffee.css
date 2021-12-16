@@ -277,6 +277,7 @@
 
   footer .container-coffee {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .page-title {
