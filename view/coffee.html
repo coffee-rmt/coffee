@@ -10,6 +10,10 @@
     <link rel="icon" href="/src/images/blue-logo.jpg" />
     <link rel="stylesheet" href="/src/styles/common.css" />
     <link rel="stylesheet" href="/src/styles/coffee.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>Coffee Brand</title>
   </head>
   <body>
@@ -39,7 +43,7 @@
               </div>
             </div>
             <ul class="menu-list">
-              <li class="menu-item active">
+              <li class="menu-item">
                 <a href="/view/index.html">Beranda</a>
               </li>
               <li class="menu-item">
@@ -60,23 +64,74 @@
         <div class="product-coffee-card">
           <div class="product-container">
             <div class="img-wrapper">
-              <img
-                src="/src/images/coffee-page/Barzini _Mou-55.jpg"
-                alt="product-card"
-              />
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="/src/images/coffee-page/Barzini _Mou-55.jpg"
+                      alt="product-card"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="/src/images/coffee-page/Barzini _Mou-55.jpg"
+                      alt="product-card"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="/src/images/coffee-page/Barzini _Mou-55.jpg"
+                      alt="product-card"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
             </div>
             <div class="product-detail">
-              <div class="product-title">Moa Coffee Machine</div>
-              <div class="product-description">
-                Mesin kapsul kopi MOA berbeda dengan mesin kapsul kopi lainnya
-                karena mesin MOA muat beberapa cangkir dari berbagai supermarket
-                (Perla, Gwoon, Lidl, dll), jadi tidak hanya satu jenis. Gelas
-                ini juga umumnya lebih murah daripada cangkir Nespresso atau
-                Dolce Gusto misalnya. Terakhir, mesin kapsul kopi MOA memiliki
-                desain cantik yang pas di interior dan dapur. Moa coffee capsule
-                machines berbeda dengan coffee capsule lainnya, dengan design
-                cantik yang cocok dengan segala interior dapur ataupun ruang 
-                kerja anda.
+              <div class="text-item" style="display: block">
+                <div class="product-title">Moa Coffee Machine</div>
+                <div class="product-description">
+                  Mesin kapsul kopi MOA berbeda dengan mesin kapsul kopi lainnya
+                  karena mesin MOA muat beberapa cangkir dari berbagai supermarket
+                  (Perla, Gwoon, Lidl, dll), jadi tidak hanya satu jenis. Gelas
+                  ini juga umumnya lebih murah daripada cangkir Nespresso atau
+                  Dolce Gusto misalnya. Terakhir, mesin kapsul kopi MOA memiliki
+                  desain cantik yang pas di interior dan dapur. Moa coffee capsule
+                  machines berbeda dengan coffee capsule lainnya, dengan design
+                  cantik yang cocok dengan segala interior dapur ataupun ruang 
+                  kerja anda.
+                </div>
+              </div>
+              <div class="text-item" style="display: none">
+                <div class="product-title">Moa Coffee Machine slide 2</div>
+                <div class="product-description">
+                  2 Mesin kapsul kopi MOA berbeda dengan mesin kapsul kopi lainnya
+                  karena mesin MOA muat beberapa cangkir dari berbagai supermarket
+                  (Perla, Gwoon, Lidl, dll), jadi tidak hanya satu jenis. Gelas
+                  ini juga umumnya lebih murah daripada cangkir Nespresso atau
+                  Dolce Gusto misalnya. Terakhir, mesin kapsul kopi MOA memiliki
+                  desain cantik yang pas di interior dan dapur. Moa coffee capsule
+                  machines berbeda dengan coffee capsule lainnya, dengan design
+                  cantik yang cocok dengan segala interior dapur ataupun ruang 
+                  kerja anda.
+                </div>
+              </div>
+              <div class="text-item" style="display: none">
+                <div class="product-title">Moa Coffee Machine slide 3</div>
+                <div class="product-description">
+                  3 Mesin kapsul kopi MOA berbeda dengan mesin kapsul kopi lainnya
+                  karena mesin MOA muat beberapa cangkir dari berbagai supermarket
+                  (Perla, Gwoon, Lidl, dll), jadi tidak hanya satu jenis. Gelas
+                  ini juga umumnya lebih murah daripada cangkir Nespresso atau
+                  Dolce Gusto misalnya. Terakhir, mesin kapsul kopi MOA memiliki
+                  desain cantik yang pas di interior dan dapur. Moa coffee capsule
+                  machines berbeda dengan coffee capsule lainnya, dengan design
+                  cantik yang cocok dengan segala interior dapur ataupun ruang 
+                  kerja anda.
+                </div>
               </div>
             </div>
           </div>
@@ -539,5 +594,37 @@
       </div>
     </footer>
     <script type="text/javascript" src="/src/scripts/scripts.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 8000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+
+      swiper.on('slideChange', (e) => {
+        console.log('slide changed', e.realIndex);
+        const productDetailList = document.querySelectorAll(".product-detail .text-item");
+        productDetailList?.forEach((item, idx) => {
+          if (item?.style?.display) {
+            item.style.display = idx == e.realIndex ? "block" : "none";
+          }
+        })
+      });
+    </script>
   </body>
 </html>

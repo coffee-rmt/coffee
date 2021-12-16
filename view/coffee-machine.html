@@ -540,23 +540,12 @@
         },
       });
 
-      swiper.on('slideChange', function (e) {
-        console.log('slide changed', e);
+      swiper.on('slideChange', (e) => {
         const video = document.querySelectorAll(".video");
         video.forEach((v) => {
           v.pause();
         });
       });
-
-      // $("#button_id").click(function(e){
-      //   e.preventDefault();
-      //   // Unlocks the swipe to next when the button is clicked
-      //   swiper.unlockSwipeToNext();
-      //   // Swipes to the next slide
-      //   swiper.slideNext();
-      //   // Locks the swipe to next again after moving to the next slide
-      //   swiper.lockSwipeToNext();
-      // });
     </script>
   </body>
 </html>
