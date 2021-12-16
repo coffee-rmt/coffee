@@ -65,7 +65,35 @@
       <div class="product-video-wrapper">
         <div class="container-coffee">
           <div class="video-wrapper">
-            <div class="player-slide swiper mySwiper">
+            <div class="player-slide">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <video controls height="100%" class="video">
+                      <source src="/src/videos/videoplayback.mp4" type="video/mp4">                    
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="swiper-slide">
+                    <video controls height="100%" class="video">
+                      <source src="/src/videos/videoplayback.mp4" type="video/mp4">                    
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="swiper-slide">
+                    <video controls height="100%" class="video">
+                      <source src="/src/videos/videoplayback.mp4" type="video/mp4">                    
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <!-- <div class="player-slide">
               <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -96,7 +124,7 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="video-description">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
@@ -498,7 +526,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
+      const swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
@@ -511,6 +539,24 @@
           prevEl: ".swiper-button-prev",
         },
       });
+
+      swiper.on('slideChange', function (e) {
+        console.log('slide changed', e);
+        const video = document.querySelectorAll(".video");
+        video.forEach((v) => {
+          v.pause();
+        });
+      });
+
+      // $("#button_id").click(function(e){
+      //   e.preventDefault();
+      //   // Unlocks the swipe to next when the button is clicked
+      //   swiper.unlockSwipeToNext();
+      //   // Swipes to the next slide
+      //   swiper.slideNext();
+      //   // Locks the swipe to next again after moving to the next slide
+      //   swiper.lockSwipeToNext();
+      // });
     </script>
   </body>
 </html>
