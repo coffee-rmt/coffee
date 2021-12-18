@@ -633,8 +633,9 @@ footer .copyright .container-coffee {
 }
 
 .product-video-wrapper .video-description .button {
-  display: none;
   margin-top: 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .swiper {
@@ -1085,8 +1086,14 @@ footer .copyright .container-coffee {
 
   .product-video-wrapper .video-description .button {
     display: flex;
-    width: 50%;
-    min-width: 200px;
+    /* width: 50%; */
+    /* min-width: 200px; */
+  }
+
+  .product-video-wrapper .video-description .row-button {
+    display: flex;
+    gap: 16px;
+    text-align: center;
   }
 }
 
