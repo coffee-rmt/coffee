@@ -1016,6 +1016,7 @@ footer .copyright .container-coffee {
 
   .image-product-modal .focused-img-wrapper {
     width: 400px;
+    min-width: 400px;
     height: 400px;
     background: #fdf4f4;
   }
@@ -1030,6 +1031,18 @@ footer .copyright .container-coffee {
     font-size: 20px;
     letter-spacing: 0.04em;
     color: #1f1f1f;
+    font-weight: 600;
+  }
+
+  .image-list-wrapper .title.description {
+    margin: 36px 0 12px;
+  }
+
+  .image-list-wrapper .description-product{
+    letter-spacing: 0.04em;
+    color: #1f1f1f;
+    font-size: 18px;
+    line-height: 26px;
   }
 
   .image-product-modal .image-list {

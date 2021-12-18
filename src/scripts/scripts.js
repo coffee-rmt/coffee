@@ -79,6 +79,7 @@ const openModalImage = (product) => {
   src(".image-product-modal .focused-img-wrapper img", imageList[0]);
 
   populateImageOnModal(imageList);
+  innerHTML(".image-list-wrapper .description-product", product?.description);
   lockScrolling();
 };
 
