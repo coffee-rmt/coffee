@@ -21,6 +21,10 @@ body {
   background-image: url("/src/images/coffe-overlay.png");
 }
 
+.our-link-wrapper {
+  background-image: url("/src/images/coffe-overlay.png");
+}
+
 .button {
   height: 48px;
   background: #3e4444;
@@ -779,16 +783,16 @@ footer .copyright .container-coffee {
 }
 
 .detail-product-modal .product-detail .title {
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 20px;
   letter-spacing: 0.04em;
   color: #1f1f1f;
   margin-bottom: 12px;
 }
 
 .detail-product-modal .product-detail .product-price {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 16px;
+  line-height: 16px;
   letter-spacing: 0.04em;
   color: #00cc5e;
   margin-bottom: 16px;
@@ -1038,7 +1042,7 @@ footer .copyright .container-coffee {
     margin: 36px 0 12px;
   }
 
-  .image-list-wrapper .description-product{
+  .image-list-wrapper .description-product {
     letter-spacing: 0.04em;
     color: #1f1f1f;
     font-size: 18px;

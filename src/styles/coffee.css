@@ -68,7 +68,7 @@
   font-size: 18px;
   line-height: 18px;
   letter-spacing: 0.06em;
-  color: #3E4444;
+  color: #3e4444;
   text-decoration: none;
 }
 
@@ -171,6 +171,15 @@
   line-height: 15px;
   letter-spacing: 0.04em;
   color: #00cc5e;
+}
+
+.product-list .product-before-discount {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: #656565;
+  text-decoration: line-through;
+  margin-top: 4px;
 }
 
 .product-list .product-item .marketplace-button {
@@ -391,7 +400,7 @@
   }
 
   .product-list .product-item {
-    min-width: auto;
+    min-width: 186px;
     max-width: auto;
   }
 
@@ -427,7 +436,7 @@
     font-size: 13px;
     margin-top: 4px;
   }
-  
+
   .product-list .discount-text {
     font-size: 12px;
     margin-top: 4px;
