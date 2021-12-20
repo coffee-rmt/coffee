@@ -457,7 +457,7 @@ footer .copyright .container-coffee {
 
 .pagination-desktop {
   display: flex;
-  margin: 68px auto 0;
+  margin: 24px 16px 100px;
   align-items: center;
   justify-content: center;
   font-size: 18px;
@@ -465,6 +465,7 @@ footer .copyright .container-coffee {
   color: #ffffff;
   gap: 16px;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .pagination-desktop .prev-next {
@@ -1111,6 +1112,10 @@ footer .copyright .container-coffee {
     display: flex;
     gap: 16px;
     text-align: center;
+  }
+
+  .pagination-desktop {
+    margin: 68px auto 0;
   }
 }
 
