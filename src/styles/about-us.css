@@ -26,12 +26,12 @@
 }
 
 .about-us-wrapper .about-us-right {
-  display: none;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.09em;
   font-weight: 500;
   color: #000000;
+  margin: -80px 0 100px;
 }
 
 .our-team-wrapper {
@@ -116,7 +116,7 @@
   }
 
   .about-us-wrapper .about-us-right {
-    display: block;
+    margin: 0;
   }
 
   .our-team-wrapper .our-team-list {
