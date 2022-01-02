@@ -18,6 +18,14 @@
   </head>
   <body>
     <main class="screen">
+      <div class="pour-coffee">
+        <button type="button">></button>
+        <a href="javascript:void(0);">
+          <video autoplay loop>
+            <source src="/src/videos/pour-coffee.mp4" type="video/mp4">
+          </video>
+        </a>
+      </div>
       <nav class="top-nav">
         <div class="top-nav-container">
           <div class="logo-wrapper">
@@ -60,7 +68,9 @@
         </div>
       </nav>
       <div class="container-coffee">
-        <div class="page-title">Kopi</div>
+        <div class="page-title-wrapper">
+          <div class="page-title">Kopi</div>
+        </div>
         <div class="product-coffee-card">
           <div class="product-container">
             <div class="img-wrapper">
@@ -438,9 +448,39 @@
           <div class="banner-title">Lorem Ipsum used</div>
           <div class="img-banner">
             <img
-              src="/src/images/coffee-page/coffee-banner-2.png"
+              src="/src/images/header-empty.png"
               alt="banner"
             />
+            <div class="box-list-wrapper">
+              <div>
+                <div class="box-item">
+                  <img src="/src/images/box-text-1-screen.png" alt=" " />
+                  <img class="box-item-detail" src="/src/images/box-text-1-detail.png" alt=" " />   
+                  <img class="box-item-text" src="/src/images/box-text-1-lungo.png" alt=" " />  
+                </div>
+              </div>
+              <div>
+                <div class="box-item">
+                  <img src="/src/images/box-text-2-screen.png" alt=" " />
+                  <img class="box-item-detail" src="/src/images/box-text-2-detail.png" alt=" " />   
+                  <img class="box-item-text" src="/src/images/box-text-2-espresso.png" alt=" " /> 
+                </div>
+              </div>
+              <div>
+                <div class="box-item">
+                  <img src="/src/images/box-text-3-screen.png" alt=" " />
+                  <img class="box-item-detail" src="/src/images/box-text-3-detail.png" alt=" " />   
+                  <img class="box-item-text" src="/src/images/box-text-3-ristretto.png" alt=" " /> 
+                </div>
+              </div>
+              <div>
+                <div class="box-item">
+                  <img src="/src/images/box-text-4-screen.png" alt=" " />
+                  <img class="box-item-detail" src="/src/images/box-text-4-detail.png" alt=" " />   
+                  <img class="box-item-text" src="/src/images/box-text-4-decaf.png" alt=" " /> 
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -528,6 +568,18 @@
       </div>
       <div class="drawer-right">a</div>
     </div>
+    <div class="footer-svg-wrapper">
+      <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <path d="M0 487L25 486.7C50 486.3 100 485.7 150 484.5C200 483.3 250 481.7 300 482C350 482.3 400 484.7 450 484.8C500 485 550 483 600
+          485C650 487 700 493 750 489.2C800 485.3 850 471.7 875 464.8L900 458L900 601L875 601C850 601 800 601 750 601C700 601 650 601 600 
+          601C550 601 500 601 450 601C400 601 350 601 300 601C250 601 200 601 150 601C100 601 50 601 25 601L0 601Z" fill="#848484"></path>
+        <path d="M0 499L25 501.8C50 504.7 100 510.3 150 513.8C200 517.3 250 518.7 300 515.3C350 512 400 504 450 500.2C500 496.3 550 496.7 
+          600 503.3C650 510 700 523 750 529.5C800 536 850 536 875 536L900 536L900 601L875 601C850 601 800 601 750 601C700 601 650 601 600
+          601C550 601 500 601 450 601C400 601 350 601 300 601C250 601 200 601 150 601C100 601 50 601 25 601L0 601Z" fill="#5f6363"></path>
+        <path d="M0 567L25 566C50 565 100 563 150 559C200 555 250 549 300 549.2C350 549.3 400 555.7 450 559.3C500 563 550 564 600 561.5C650
+          559 700 553 750 548.5C800 544 850 541 875 539.5L900 538L900 601L875 601C850 601 800 601 750 601C700 601 650 601 600 601C550 601
+          500 601 450 601C400 601 350 601 300 601C250 601 200 601 150 601C100 601 50 601 25 601L0 601Z" fill="#3d4444"></path></svg>
+    </div>
     <footer tabindex="0">
       <div class="footer-content container-coffee">
         <div class="footer-section">
@@ -599,6 +651,7 @@
     </footer>
     <script type="text/javascript" src="/src/scripts/scripts.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="/src/scripts/tilt.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -621,13 +674,20 @@
       });
 
       swiper.on('slideChange', (e) => {
-        console.log('slide changed', e.realIndex);
         const productDetailList = document.querySelectorAll(".product-detail .text-item");
         productDetailList?.forEach((item, idx) => {
           if (item?.style?.display) {
             item.style.display = idx == e.realIndex ? "block" : "none";
           }
         })
+      });
+    </script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".box-item"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": '0.7',
       });
     </script>
   </body>

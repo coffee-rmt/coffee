@@ -1,5 +1,10 @@
+.screen {
+  overflow-x: hidden;
+}
+
 .container-coffee {
   padding-bottom: 100px;
+  margin-top: 54px;
 }
 
 .product-coffee-card {
@@ -265,6 +270,9 @@
 
 .singgle-banner .img-banner {
   width: 100%;
+  max-width: 1200px;
+  border-radius: 16px;
+  position: relative;
 }
 
 .singgle-banner .img-banner img {
@@ -273,13 +281,59 @@
   border-radius: 8px;
 }
 
+.singgle-banner .img-banner .box-list-wrapper {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: calc(30%);
+  width: 100%;
+  padding: 0 20px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 50%;
+}
+
+.singgle-banner .img-banner .box-list-wrapper > div {
+  position: relative;
+  width: 25%;
+  height: 100%;
+}
+
+.singgle-banner .img-banner .box-list-wrapper .box-item {
+  position: absolute;
+  width: 100%;
+  border-radius: 0;
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.singgle-banner .img-banner .box-list-wrapper .box-item img {
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.singgle-banner .img-banner .box-list-wrapper  .box-item-detail {
+  transform: translate3d(0, 0, 30px);
+}
+
+.singgle-banner .img-banner .box-list-wrapper  .box-item-text {
+  transform: translate3d(0, 0, 20px);
+}
+
+.top-nav {
+  position: fixed;
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .container-coffee {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 24px;
+    margin: 64px 24px 0;
     overflow-x: unset;
     padding-bottom: 0;
   }
@@ -289,11 +343,15 @@
     align-items: flex-start;
   }
 
-  .page-title {
-    margin-left: auto;
-    margin-right: auto;
+  .page-title-wrapper {
+    margin: auto;
     max-width: 1200px;
     width: 100%;
+  }
+
+  .page-title {
+    margin-left: 0;
+    margin-right: auto;
   }
 
   .product-coffee-card {
