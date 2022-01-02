@@ -1,3 +1,5 @@
+let isOpenPourCoffee = true;
+
 const lockScrolling = () => {
   const bodyElement = document.querySelector("body");
   bodyElement.style.overflow = "hidden";
@@ -5,7 +7,9 @@ const lockScrolling = () => {
 
 const hideElement = (selector) => {
   const element = document.querySelector(selector);
-  element.style.display = "none";
+  if (element) {
+    element.style.display = "none";
+  }
 };
 
 const showElement = (selector) => {
@@ -45,7 +49,6 @@ const getYear = () => {
 };
 
 const setActiveImgOnMobile = (elem, img) => {
-  console.log(img);
   src(".detail-product-modal img", img);
 
   toggle(".detail-product-modal .image-list .img-wrapper.active", "active");
@@ -123,7 +126,6 @@ const openModalProductMobile = (product, isCoffeePage) => {
       }</a>`;
   });
   innerHTML(".detail-product-modal .marketplaces", marketplacesElement);
-  console.log(product.img);
   populateImageOnMobile(product.img);
 
   lockScrolling();
@@ -169,12 +171,71 @@ const keyPressEsc = () => {
 
 const loadFile = (event, selector) => {
   const output = document.querySelector(selector);
-  document.querySelector(".img-upload").style.marginTop = "0",
-  output.src = URL.createObjectURL(event.target.files[0]);
+  (document.querySelector(".img-upload").style.marginTop = "0"),
+    (output.src = URL.createObjectURL(event.target.files[0]));
   output.onload = () => {
     URL.revokeObjectURL(output.src);
   };
 };
+
+const adjustOpacityIndexSlider = () => {
+  if (typeof jQuery != "undefined") {
+    $(window).scroll(() => {
+      const scrollTop = $(this).scrollTop();
+      $(".slick-slider-wrapper")?.css({
+        opacity: () => {
+          const elementHeight = 450,
+            opacity = (scrollTop - elementHeight) / elementHeight;
+          return opacity;
+        },
+      });
+    });
+  }
+};
+
+const adjustWave = () => {
+  if (typeof jQuery != "undefined") {
+    $(".wave-rotating")?.css({
+      height: window.innerWidth * 0.3,
+      width: window.innerWidth * 0.3,
+    });
+    $(".wave-effect")?.css({
+      width: window.innerWidth,
+      height: "auto",
+    });
+  }
+};
+
+const adjustBannerItemSize = () => {
+  if (typeof jQuery != "undefined") {
+    adjustWave();
+    $(window).resize(() => {
+      adjustWave();
+    });
+  }
+};
+
+const closePourCoffee = () => {
+  isOpenPourCoffee = false;
+  const element = document.querySelector(".pour-coffee");
+  element.style.right = "-84px";
+  element.style.opacity = "0.6";
+  const maxMobile = 768;
+  if (window.innerWidth > maxMobile) {
+    element.style.right = "-160px";
+  }
+  const elementButton = document.querySelector(".pour-coffee button");
+  elementButton.style.transform = "rotate(180deg)";
+}
+
+const openPourCoffee = () => {
+  isOpenPourCoffee = true;
+  const element = document.querySelector(".pour-coffee");
+  element.style.right = "0";
+  element.style.opacity = "1";
+  const elementButton = document.querySelector(".pour-coffee button");
+  elementButton.style.transform = "rotate(0deg)";
+}
 
 window.addEventListener("DOMContentLoaded", () => {
   try {
@@ -246,8 +307,20 @@ window.addEventListener("DOMContentLoaded", () => {
     hideElement(".detail-product-modal");
     hideElement(".image-product-modal");
 
+    // const boxList = document.querySelectorAll(".box-list-wrapper div");
+    adjustOpacityIndexSlider();
+    adjustBannerItemSize();
+
+    document
+      .querySelector(".pour-coffee button")
+      ?.addEventListener("click", () => {
+        if (isOpenPourCoffee) {
+          closePourCoffee();
+        } else {
+          openPourCoffee();
+        }
+      });
   } catch (err) {
     console.error(err);
   }
 });
-

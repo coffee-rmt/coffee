@@ -201,6 +201,123 @@
   border-radius: 0px 0px 8px 8px;
 }
 
+.slick-slider-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto auto 60px;
+}
+
+.slick-slider-wrapper li {
+  display: none;
+}
+
+.slick-slider-wrapper .slick-track {
+  display: flex;
+  gap: 32px;
+}
+
+.slick-slider-wrapper .slider-home {
+  padding: 24px;
+}
+
+.slick-slider-wrapper .slider-home img {
+  width: 100%;
+}
+
+.slick-slider-wrapper .slider-home .slick-slide {
+  width: 100%;
+}
+
+/* custom banner */
+.swiper .swiper-banner .swiper-slide {
+  position: relative;
+}
+
+.swiper .swiper-banner .swiper-slide .effect-wrapper {
+  position: absolute;
+  height: calc(100% - 19%);
+  margin-top: 1.5%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.swiper .swiper-banner .swiper-slide .kti-wave-rotating {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-right: 8%;
+  margin-top: -4%;
+}
+
+.swiper .swiper-banner .swiper-slide .kti-image {
+  width: 100px;
+  position: absolute;
+}
+
+.swiper .swiper-banner .swiper-slide .kti-wave-text {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 11%;
+  width: 25%;
+  top: 22%;
+}
+
+.singgle-banner .img-banner {
+  width: 100%;
+  position: relative;
+}
+
+.singgle-banner .img-banner img {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.singgle-banner .img-banner .box-list-wrapper {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: calc(30%);
+  width: 100%;
+  padding: 0 20px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 50%;
+}
+
+.singgle-banner .img-banner .box-list-wrapper > div {
+  position: relative;
+  width: 25%;
+  height: 100%;
+}
+
+.singgle-banner .img-banner .box-list-wrapper .box-item {
+  position: absolute;
+  width: 100%;
+  border-radius: 0;
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.singgle-banner .img-banner .box-list-wrapper .box-item img {
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.singgle-banner .img-banner .box-list-wrapper  .box-item-detail {
+  transform: translate3d(0, 0, 35px);
+}
+
+.singgle-banner .img-banner .box-list-wrapper  .box-item-text {
+  transform: translate3d(0, 0, 25px);
+}
+
 /* responsive */
 
 @media screen and (min-width: 768px) {
@@ -289,6 +406,14 @@
     border-radius: 0 8px 0 0;
     height: 50px;
     justify-content: flex-end;
+  }
+
+  .slick-slider-wrapper {
+    margin: 100px auto 0;
+  }
+
+  .slick-slider-wrapper .slick-track {
+    gap: 60px;
   }
 }
 
