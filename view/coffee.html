@@ -451,29 +451,29 @@
               src="/src/images/header-empty.png"
               alt="banner"
             />
-            <div class="box-list-wrapper">
-              <div>
+            <div class="box-list-wrapper banner-coffee-page">
+              <div class="box-item-wrapper">
                 <div class="box-item">
                   <img src="/src/images/box-text-1-screen.png" alt=" " />
                   <img class="box-item-detail" src="/src/images/box-text-1-detail.png" alt=" " />   
                   <img class="box-item-text" src="/src/images/box-text-1-lungo.png" alt=" " />  
                 </div>
               </div>
-              <div>
+              <div class="box-item-wrapper">
                 <div class="box-item">
                   <img src="/src/images/box-text-2-screen.png" alt=" " />
                   <img class="box-item-detail" src="/src/images/box-text-2-detail.png" alt=" " />   
                   <img class="box-item-text" src="/src/images/box-text-2-espresso.png" alt=" " /> 
                 </div>
               </div>
-              <div>
+              <div class="box-item-wrapper">
                 <div class="box-item">
                   <img src="/src/images/box-text-3-screen.png" alt=" " />
                   <img class="box-item-detail" src="/src/images/box-text-3-detail.png" alt=" " />   
                   <img class="box-item-text" src="/src/images/box-text-3-ristretto.png" alt=" " /> 
                 </div>
               </div>
-              <div>
+              <div class="box-item-wrapper">
                 <div class="box-item">
                   <img src="/src/images/box-text-4-screen.png" alt=" " />
                   <img class="box-item-detail" src="/src/images/box-text-4-detail.png" alt=" " />   
@@ -649,6 +649,7 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="/src/scripts/scripts.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="/src/scripts/tilt.min.js"></script>
@@ -684,7 +685,7 @@
     </script>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll(".box-item"), {
-        max: 15,
+        max: 8,
         speed: 400,
         glare: true,
         "max-glare": '0.7',

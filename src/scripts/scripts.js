@@ -226,7 +226,7 @@ const closePourCoffee = () => {
   }
   const elementButton = document.querySelector(".pour-coffee button");
   elementButton.style.transform = "rotate(180deg)";
-}
+};
 
 const openPourCoffee = () => {
   isOpenPourCoffee = true;
@@ -235,7 +235,58 @@ const openPourCoffee = () => {
   element.style.opacity = "1";
   const elementButton = document.querySelector(".pour-coffee button");
   elementButton.style.transform = "rotate(0deg)";
-}
+};
+
+const handlerBannerItemChange = (parentElement, isSecondary) => {
+  const changePosition = () => {
+    const bannerImgList = document.querySelectorAll(
+      `${parentElement} .box-item-wrapper`
+    );
+    const boxListWrapper = document.querySelector(
+      `${parentElement}.box-list-wrapper`
+    );
+
+    if (bannerImgList && boxListWrapper) {
+      const updatedBoxItemList = [
+        bannerImgList[0],
+        ...[].slice.call(bannerImgList, 4),
+      ];
+      updatedBoxItemList.forEach((updatedBoxItem) => {
+        boxListWrapper.appendChild(updatedBoxItem);
+      });
+    }
+  };
+
+  const initInterval = setInterval(changePosition, 1500);
+
+  if (isSecondary) {
+    $(`.box-item-detail.secondary-item`)?.mouseenter(() => {
+      if (typeof mouseEnterInterval !== "undefined") {
+        clearInterval(mouseEnterInterval);
+      }
+      if (initInterval) {
+        clearInterval(initInterval);
+      }
+    });
+  
+    $(`.box-item-detail.secondary-item`)?.mouseleave(() => {
+      mouseEnterInterval = setInterval(changePosition, 1500);
+    });
+  } else {
+    $(`${parentElement} .box-item-wrapper`)?.mouseenter(() => {
+      if (typeof mouseEnterInterval !== "undefined") {
+        clearInterval(mouseEnterInterval);
+      }
+      if (initInterval) {
+        clearInterval(initInterval);
+      }
+    });
+  
+    $(`${parentElement} .box-item-detail`)?.mouseleave(() => {
+      mouseEnterInterval = setInterval(changePosition, 1500);
+    });
+  }
+};
 
 window.addEventListener("DOMContentLoaded", () => {
   try {
@@ -307,7 +358,6 @@ window.addEventListener("DOMContentLoaded", () => {
     hideElement(".detail-product-modal");
     hideElement(".image-product-modal");
 
-    // const boxList = document.querySelectorAll(".box-list-wrapper div");
     adjustOpacityIndexSlider();
     adjustBannerItemSize();
 
@@ -320,6 +370,10 @@ window.addEventListener("DOMContentLoaded", () => {
           openPourCoffee();
         }
       });
+
+    handlerBannerItemChange(".banner-coffee-page");
+    handlerBannerItemChange(".banner-index-page-01");
+    handlerBannerItemChange(".swiper-slide-active .banner-index-page-02", true);
   } catch (err) {
     console.error(err);
   }
