@@ -99,6 +99,7 @@ body {
   padding-bottom: 3px;
   color: #3e4444;
   background-color: #7e7e7e;
+  cursor: pointer;
 }
 
 .top-nav .menu-list {
@@ -474,12 +475,17 @@ footer .copyright .container-coffee {
   flex-wrap: wrap;
 }
 
+.pagination-desktop a {
+  text-decoration: none;
+}
+
 .pagination-desktop .prev-next {
   padding: 8px 16px;
   background: #3e4444;
   border-radius: 4px;
   border: 1px solid #3e4444;
   cursor: pointer;
+  color: #ffffff;
 }
 
 .pagination-desktop .page {
@@ -1215,7 +1221,7 @@ footer .copyright .container-coffee {
   }
 }
 
-@media screen and (min-width: 1122px) {
+@media screen and (min-width: 1224px) {
   .top-nav .hamburger-menu {
     display: none;
   }
