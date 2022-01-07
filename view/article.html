@@ -9,8 +9,7 @@
     <link rel="apple-touch-icon" href="/src/images/blue-logo.jpg" />
     <link rel="icon" href="/src/images/blue-logo.jpg" />
     <link rel="stylesheet" href="/src/styles/common.css" />
-    <link rel="stylesheet" href="/src/styles/contact.css" />
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="/src/styles/article.css" />
     <title>Coffee Brand</title>
   </head>
   <body>
@@ -46,13 +45,13 @@
               <li class="menu-item">
                 <a href="/view/about-us.html">Tentang Kami</a>
               </li>
-              <li class="menu-item active">
+              <li class="menu-item">
                 <a href="/view/contact.html">Kontak</a>
               </li>
               <li class="menu-item">
                 <a href="/view/shipping.html">Pengiriman</a>
               </li>
-              <li class="menu-item">
+              <li class="menu-item active">
                 <a href="/view/article.html">Artikel</a>
               </li>
             </ul>
@@ -60,66 +59,87 @@
         </div>
       </nav>
       <div class="container-coffee">
-        <div class="page-title">Kontak</div>
-        <div class="card-wrapper">
-          <div class="card-left">
-            <div class="address-card">
-              <div class="address-title">
-                <img src="/src/images/pinpoint.png" alt="pinpoint" />
-                <span>Alamat Kami</span>
+        <div class="page-title-wrapper">
+          <div class="page-title">Artikel</div>
+        </div>    
+        <div class="article-list">
+          <a href="/view/article-detail.html" class="article-card-preview">
+            <div class="article-img">
+              <img src="/src/images/coffee-news.jpg" alt=" " />
+            </div>
+            <div class="article-content">
+              <div class="article-title">
+                Lorem Ipsum Article Title 2
               </div>
-              <div class="address-detail">
-                Talavera Office Park Lantai 28, Jl. TB Simatupang Kav. 22-23, RT1/RW 1,
-                Cilandak, Jakarta Selatan, Daerah Istimewa Ibukota Jakarta 12430
+              <div class="article-body-preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime mollitiae adipisci amet laborum. Perspiciatis...
               </div>
             </div>
-            <div class="google-map-wrapper">
-              <!-- // https://maps-website.com/ -->
-              <iframe
-                width="100%"
-                height="400"
-                frameborder="0"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0"
-                id="gmap_canvas"
-                src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=MARQUEE%20-%20Talavera%20Office%20Park%20Jakarta+(KTI)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              ></iframe>
-              <a
-                href="https://www.versicherungen.at/private-krankenversicherung/"
-                >.</a
-              >
+          </a>
+          <a href="/view/article-detail.html" class="article-card-preview">
+            <div class="article-img">
+              <img src="/src/images/coffee-news.jpg" alt=" " />
             </div>
-          </div>
-          <div class="card-right">
-            <div class="contact-card">
-              <div class="contact-item">
-                <img src="/src/images/whatsapp-icon.png" alt="whatsapp" />
-                <span class="key">Telp: </span
-                ><span class="value">+62 8131-0931-008</span>
+            <div class="article-content">
+              <div class="article-title">
+                Lorem Ipsum Article Title 3
               </div>
-              <div class="contact-item">
-                <img src="/src/images/instagram-icon.png" alt="instagram" />
-                <span class="key">Email: </span
-                ><span class="value">@kti_shop</span>
+              <div class="article-body-preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime mollitiae adipisci amet laborum. Perspiciatis...
               </div>
             </div>
-            <div class="form-card">
-              <div class="input-wrapper">
-                <label>Nama</label>
-                <input type="text" />
-              </div>
-              <div class="input-wrapper">
-                <label>Telp / Email</label>
-                <input type="text" />
-              </div>
-              <div class="input-wrapper">
-                <label>Nama</label>
-                <textarea rows="4"></textarea>
-              </div>
-              <div class="button">Kirim Pesan</div>
+          </a>
+          <a href="/view/article-detail.html" class="article-card-preview">
+            <div class="article-img">
+              <img src="/src/images/coffee-news.jpg" alt=" " />
             </div>
-          </div>
+            <div class="article-content">
+              <div class="article-title">
+                Lorem Ipsum Article Title 3
+              </div>
+              <div class="article-body-preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime mollitiae adipisci amet laborum. Perspiciatis...
+              </div>
+            </div>
+          </a>
+          <a href="/view/article-detail.html" class="article-card-preview">
+            <div class="article-img">
+              <img src="/src/images/coffee-news.jpg" alt=" " />
+            </div>
+            <div class="article-content">
+              <div class="article-title">
+                Lorem Ipsum Article Title 4
+              </div>
+              <div class="article-body-preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime mollitiae adipisci amet laborum. Perspiciatis...
+              </div>
+            </div>
+          </a>
+          <a href="/view/article-detail.html" class="article-card-preview">
+            <div class="article-img">
+              <img src="/src/images/coffee-news.jpg" alt=" " />
+            </div>
+            <div class="article-content">
+              <div class="article-title">
+                Lorem Ipsum Article Title 5
+              </div>
+              <div class="article-body-preview">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime mollitiae adipisci amet laborum. Perspiciatis...
+              </div>
+            </div>
+          </a>
+        </div>    
+        <div class="pagination-desktop">
+          <a href="#" class="prev-next">Prev</a>
+          <a href="#" class="page active">1</a>
+          <a href="#" class="page">2</a>
+          <a href="#" class="page">3</a>
+          <a href="#" class="prev-next">Next</a>
         </div>
       </div>
       <nav class="bottom-nav">
@@ -154,9 +174,9 @@
         </div>
         <div class="menu-list">
           <a class="menu-item" href="/view/about-us.html">Tentang Kami</a>
-          <a class="menu-item active" href="/view/contact.html">Kontak</a>
+          <a class="menu-item" href="/view/contact.html">Kontak</a>
           <a class="menu-item" href="/view/shipping.html">Pengiriman</a>
-          <a class="menu-item" href="/view/article.html">Artikel</a>
+          <a class="menu-item active" href="/view/article.html">Artikel</a>
         </div>
       </div>
       <div class="drawer-right">a</div>
@@ -243,9 +263,5 @@
       </div>
     </footer>
     <script type="text/javascript" src="/src/scripts/scripts.js"></script>
-    <script
-      type="text/javascript"
-      src="https://embedmaps.com/google-maps-authorization/script.js?id=be82a0eaa5bb265eddcb38e0539070dd36204ffa"
-    ></script>
   </body>
 </html>
